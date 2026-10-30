@@ -23,6 +23,7 @@ window.CONFIG = {
     { name: "Instagram", icon: "Instagram.png", text: "@mostlytsar",                 url: "https://www.instagram.com/mostlytsar" }
   ],
   MORE_ICON: "more.png",
+  POST_STICKERS: ["yellow_love.png", "love.png"],   // small stickers on post cards
   MORE_LINKS: [],                   // [{label:"Name", url:"https://..."}] shown in the "More" popup
   CONTACT: ["Email", "WhatsApp", "Instagram"],
   // Stickers: [file, "inline css"]. Positions are relative to the hero / sidebar block.
