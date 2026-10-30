@@ -1,6 +1,6 @@
 /* One place for every path, link and editable text. */
 window.CONFIG = {
-  API_URL: "",                      // paste your Apps Script Web App /exec URL (empty = sample posts)
+  API_URL: "https://script.google.com/macros/s/AKfycbzMgJNS2h9IBrOJ3JoRJKlvkoFzCOUWIvfbYZCuOdK7SeyCM1k2d3Uoa8G9HtTdSmaRRg/exec",                      // paste your Apps Script Web App /exec URL (empty = sample posts)
   ASSET_BASE: "assets/",            // folder with your existing PNGs
   PROFILE: "assets/profile.png",    // your existing profile image path (separate asset)
   NAV: [                            // [section id, label, existing button file]
