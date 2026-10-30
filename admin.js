@@ -12,8 +12,13 @@
 
   async function call(body) {   // text/plain avoids a CORS preflight, which Apps Script can't answer
     if (!C.API_URL) throw new Error("API_URL is empty in config.js");
-    const r = await fetch(C.API_URL, { method: "POST", headers: { "Content-Type": "text/plain;charset=utf-8" }, body: JSON.stringify({ token, ...body }) });
-    const d = await r.json();
+    let d;
+    try {
+      const r = await fetch(C.API_URL, { method: "POST", headers: { "Content-Type": "text/plain;charset=utf-8" }, body: JSON.stringify({ token, ...body }) });
+      d = await r.json();
+    } catch (e) {
+      throw new Error("Can't reach the script. Redeploy the Web App as a NEW VERSION (Execute as: Me, Access: Anyone) and make sure Code.gs has doPost.");
+    }
     if (!d.ok) throw new Error(d.error || "Request failed");
     return d;
   }
