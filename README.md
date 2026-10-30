@@ -19,3 +19,6 @@ A missing file simply hides itself.
 ## 3. Future admin.html
 `doPost` already supports `save`, `delete` and `upload` (base64) behind `ADMIN_TOKEN`. Never put the token in public pages; the admin page should ask for it at login.
 Redeploy (new version) after every Code.gs change.
+
+## 4. admin.html
+Open `admin.html`, enter your `ADMIN_TOKEN`, then create, edit, delete, save drafts, publish and upload images (resized to JPEG in the browser, saved to your `UPLOAD_FOLDER_ID` Drive folder). Needs `Code.gs` redeployed as a **New version** after the latest update.
