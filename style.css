@@ -267,3 +267,6 @@ html.stage main[data-view=contact] .lbl{font-size:30px;padding:14px 30px}html.st
 html.stage main[data-view=contact] .contact .paper{margin:0;font-size:24px;line-height:32px;max-width:520px;padding:20px 26px}
 @keyframes view-in{from{opacity:0;transform:translateY(14px) scale(.98)}}
 @media(prefers-reduced-motion:reduce){html.stage main>*{animation:none}}
+
+/* v5: post thumbnails show the whole picture instead of cropping it */
+.thumb img{object-fit:contain}
