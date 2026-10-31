@@ -96,7 +96,7 @@ html.loading body *,html.loading body *::before,html.loading body *::after{anima
   // Posts
   const TYPES = [["all","All"],["image","Image"],["image_text","Image + Text"],["text","Text"],["link","Link"]];
   const grid = $("#grid"), state = $("#state");
-  let posts = [], filter = "all";
+  let posts = [], filter = "all", shown = [];
   $("#filters").innerHTML = TYPES.map(([k, l]) => `<button type="button" data-k="${k}" aria-pressed="${k === "all"}">${l}</button>`).join("");
   $("#filters").onclick = e => {
     const b = e.target.closest("button"); if (!b) return;
@@ -118,12 +118,34 @@ html.loading body *,html.loading body *::before,html.loading body *::after{anima
     const l = posts.filter(p => filter === "all" || p.type === filter);
     if (!l.length) return say("No posts here yet. Check back soon!");
     state.hidden = true; grid.innerHTML = l.map(card).join("");
+    shown = l;   // remember which post each card is, so a click can open it
+    [...grid.children].forEach((el, i) => { el.dataset.i = i; if (el.tagName !== "A") { el.tabIndex = 0; el.setAttribute("role", "button"); } });
   }
   async function load() {
     say("Loading posts…");
     try { posts = await API.getPosts(); render(); }
     catch (e) { say("Couldn't load posts. Check your API_URL in config.js, then try again.", true); }
   }
+  // Post popup: click any post to read it bigger; close with the button, Esc or a click outside
+  const pop = document.createElement("dialog");
+  pop.id = "postPop"; pop.setAttribute("aria-label", "Post");
+  pop.innerHTML = '<button type="button" class="pp-x" aria-label="Close">✕</button><div class="pp-body"></div>';
+  document.body.appendChild(pop);
+  const ppBody = pop.querySelector(".pp-body");
+  const openPost = p => {
+    const t = p.type, img = p.imageUrl && t !== "text" ? `<div class="pp-img"><img src="${esc(src(p.imageUrl))}" alt="${esc(p.title)}"></div>` : "";
+    const link = t === "link" && p.linkUrl ? `<a class="pp-link" href="${esc(safe(p.linkUrl))}" target="_blank" rel="noopener noreferrer">Open link ↗</a>` : "";
+    ppBody.innerHTML = `${img}<div class="pp-txt">${p.title ? `<h3>${esc(p.title)}</h3>` : ""}<time datetime="${esc(p.date)}">${fmt(p.date)}${p.category ? " · " + esc(p.category) : ""}</time>${t !== "image" && p.content ? `<p>${esc(p.content)}</p>` : ""}${link}</div>`;
+    pop.showModal(); ppBody.scrollTop = 0;
+  };
+  grid.addEventListener("click", e => {
+    const el = e.target.closest(".post"); if (!el) return;
+    e.preventDefault();                       // link posts open in the popup first; its button opens the link
+    const p = shown[+el.dataset.i]; if (p) openPost(p);
+  });
+  grid.addEventListener("keydown", e => { if ((e.key === "Enter" || e.key === " ") && e.target.matches(".post[role=button]")) { e.preventDefault(); e.target.click(); } });
+  pop.querySelector(".pp-x").onclick = () => pop.close();
+  pop.addEventListener("click", e => { if (e.target === pop) pop.close(); });
   // Stage mode (desktop): the whole site is drawn on a 1280x820 stage scaled to fit the screen; the nav swaps views
   const root = document.documentElement, mainEl = $("main"), VIEWS = ["home", "about", "portfolio", "posts", "contact"];
   function setView(id, keepHash) {
