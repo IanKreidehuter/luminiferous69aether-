@@ -4,18 +4,30 @@
   const src = n => /^(https?:|data:|\/|\.)/.test(n) ? n : C.ASSET_BASE + n;
   const safe = u => /^(https?:|mailto:)/i.test(u) ? u : "#";
   const fmt = d => { const t = new Date(d); return isNaN(t) ? "" : t.toLocaleDateString("en-US", {month:"short", day:"numeric", year:"numeric"}); };
-  const stickers = l => l.map(([n, st]) => `<img class="sticker" src="${esc(src(n))}" alt="" style="${esc(st)}">`).join("");
+  const stickers = l => l.map(([n, st, cl]) => `<img class="sticker ${cl || ""}" src="${esc(src(n))}" alt="" style="${esc(st)}">`).join("");
 
   // Missing assets hide themselves instead of showing broken icons.
   document.addEventListener("error", e => { if (e.target.tagName === "IMG") e.target.classList.add("broken"); }, true);
 
   $("#profile").src = $("#profile2").src = C.PROFILE;
   $("#decoHero").innerHTML = stickers(C.DECO_HERO);
-  $("#decoSide").innerHTML = stickers(C.DECO_SIDE);
-  $("#nav").innerHTML = C.NAV.map(([id, label, f]) =>
-    `<a href="#${id}" data-id="${id}" class="nb"><img src="${esc(src(f))}" alt=""><span>${esc(label)}</span></a>`).join("");
+  $("#decoHeroM").innerHTML = stickers(C.DECO_HERO_M);
+  const side = $("#decoSide"), pool = C.DECO_SIDE_POOL || [];
+  const fillSide = () => {          // scatter stickers down the whole sidebar height
+    const h = side.offsetHeight; side.innerHTML = "";
+    if (!h || !pool.length) return;
+    let html = "", i = 0;
+    for (let y = 6; y < h - 70; y += 118, i++) {
+      const f = pool[i % pool.length], tw = /love|yellow/.test(f) ? " twinkle" : "";
+      html += `<img class="sticker${tw}" src="${esc(src(f))}" alt="" style="left:${(i % 2 ? 48 : 4) + (i * 11) % 14}%;top:${y}px;width:${58 + (i * 29) % 44}px;--r:${(i * 19) % 24 - 12}deg;--d:-${(i * 7) % 5}s">`;
+    }
+    side.innerHTML = html;
+  };
+  if ("ResizeObserver" in window) new ResizeObserver(fillSide).observe(side); else fillSide();
+  $("#nav").innerHTML = C.NAV.map(([id, label, f, r]) =>
+    `<a href="#${id}" data-id="${id}" class="nb"><img class="wide" src="${esc(src(f))}" alt=""><img class="round" src="${esc(src(r || f))}" alt=""><span>${esc(label)}</span></a>`).join("");
   $("#info").innerHTML = C.INFO.map(([i, l, v]) => `<li><span aria-hidden="true">${i}</span><span><b>${esc(l)}:</b> ${esc(v)}</span></li>`).join("");
-  $("#skills").innerHTML = C.SKILLS.map(([i, t]) => `<li><span aria-hidden="true">${i}</span><em>${esc(t)}</em></li>`).join("");
+  $("#skills").innerHTML = C.SKILLS.map(([i, t]) => `<li title="${esc(t)}"><span aria-hidden="true">${i}</span><em>${esc(t)}</em></li>`).join("");
   $("#social").innerHTML = C.SOCIAL.map(s =>
     `<li><a href="${esc(safe(s.url))}" target="_blank" rel="noopener noreferrer" title="${esc(s.text)}"><img src="${esc(src(s.icon))}" alt=""><span>${esc(s.name)}</span></a></li>`).join("") +
     `<li><button type="button" class="moreBtn" aria-haspopup="dialog" title="More"><img src="${esc(src(C.MORE_ICON))}" alt=""><span>More</span></button></li>`;
@@ -76,6 +88,12 @@
     say("Loading posts…");
     try { posts = await API.getPosts(); render(); }
     catch (e) { say("Couldn't load posts. Check your API_URL in config.js, then try again.", true); }
+  }
+  // Cards fade in as they scroll into view
+  document.documentElement.classList.add("js");
+  if ("IntersectionObserver" in window) {
+    const ro = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { en.target.classList.add("in"); ro.unobserve(en.target); } }), {threshold: .06});
+    document.querySelectorAll(".hero,.card").forEach(e => { e.classList.add("rv"); ro.observe(e); });
   }
   load();
 })();
