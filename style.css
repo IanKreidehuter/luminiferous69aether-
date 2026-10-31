@@ -196,3 +196,8 @@ main>*,.card,.phead{min-width:0}
  .skills{display:grid;grid-template-columns:repeat(4,1fr);gap:10px 4px;justify-items:center}
 }
 @media(prefers-reduced-motion:reduce){.sticker,.hero h1,.post,.mprof,.nb img{animation:none!important}.js .rv{opacity:1;transform:none}}
+
+/* protection layer (active only when script.js adds .protect) */
+.protect body{-webkit-touch-callout:none}
+.protect input,.protect textarea{-webkit-touch-callout:default}
+.protect img{pointer-events:none;-webkit-user-drag:none;user-select:none;-webkit-user-select:none}
