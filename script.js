@@ -51,10 +51,11 @@
   // Smooth scroll + active nav
   document.querySelectorAll(".nb").forEach(a => a.addEventListener("click", e => {
     e.preventDefault();
+    if (root.classList.contains("stage")) return setView(a.dataset.id);   // desktop: swap views, no scrolling
     document.getElementById(a.dataset.id)?.scrollIntoView({behavior: matchMedia("(prefers-reduced-motion:reduce)").matches ? "auto" : "smooth"});
   }));
   const io = new IntersectionObserver(es => es.forEach(en => {
-    if (en.isIntersecting) document.querySelectorAll(".nb").forEach(a => a.classList.toggle("on", a.dataset.id === en.target.id));
+    if (en.isIntersecting && !root.classList.contains("stage")) document.querySelectorAll(".nb").forEach(a => a.classList.toggle("on", a.dataset.id === en.target.id));
   }), {rootMargin: "-40% 0px -55% 0px"});
   C.NAV.forEach(([id]) => { const s = document.getElementById(id); if (s) io.observe(s); });
 
@@ -89,6 +90,22 @@
     try { posts = await API.getPosts(); render(); }
     catch (e) { say("Couldn't load posts. Check your API_URL in config.js, then try again.", true); }
   }
+  // Stage mode (desktop): the whole site is drawn on a 1280x820 stage scaled to fit the screen; the nav swaps views
+  const root = document.documentElement, mainEl = $("main"), VIEWS = ["home", "about", "portfolio", "posts", "contact"];
+  function setView(id, keepHash) {
+    if (!VIEWS.includes(id)) id = "home";
+    mainEl.dataset.view = id;
+    document.querySelectorAll(".nb").forEach(a => a.classList.toggle("on", a.dataset.id === id));
+    if (!keepHash) history.replaceState(null, "", "#" + id);
+    const g = $("#grid"); if (g) g.scrollTop = 0;
+  }
+  function fit() {
+    const on = innerWidth >= 1000 && innerHeight >= 520, was = root.classList.contains("stage");
+    root.classList.toggle("stage", on);
+    if (on) root.style.setProperty("--z", Math.min(innerWidth / 1280, innerHeight / 820, 1.8).toFixed(3));
+    if (on && !was) setView(location.hash.slice(1), true);
+  }
+  addEventListener("resize", fit); fit();
   // Protection layer: no right-click / long-press menu, no image dragging (turn off with PROTECT_IMAGES: false)
   if (C.PROTECT_IMAGES !== false) {
     document.documentElement.classList.add("protect");
