@@ -118,5 +118,22 @@
     const ro = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { en.target.classList.add("in"); ro.unobserve(en.target); } }), {threshold: .06});
     document.querySelectorAll(".hero,.card").forEach(e => { e.classList.add("rv"); ro.observe(e); });
   }
-  load();
+  // Loading screen: hide it once fonts, stickers and the first posts request are done (12 s max)
+  const loader = $("#loader"), bar = $("#loaderBar");
+  const settle = i => i.complete ? Promise.resolve() : new Promise(r => { i.addEventListener("load", r, {once: true}); i.addEventListener("error", r, {once: true}); });
+  const seen = new Set(), prog = {n: 0, done: 0};
+  const watch = () => {              // lazy post thumbnails are skipped so they never block the screen
+    const l = [...document.images].filter(i => i.loading !== "lazy" && !seen.has(i));
+    l.forEach(i => seen.add(i)); prog.n += l.length;
+    return Promise.all(l.map(i => settle(i).then(() => { prog.done++; if (bar) bar.style.width = Math.max(8, Math.round(100 * prog.done / prog.n)) + "%"; })));
+  };
+  (async () => {
+    const first = watch();
+    await Promise.race([
+      Promise.all([first, load(), document.fonts ? document.fonts.ready : 0]).then(watch),
+      new Promise(r => setTimeout(r, 12000))
+    ]);
+    root.classList.remove("loading");
+    if (loader) { loader.classList.add("done"); setTimeout(() => loader.remove(), 800); }
+  })();
 })();
