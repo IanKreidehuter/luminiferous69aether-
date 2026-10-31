@@ -89,6 +89,12 @@
     try { posts = await API.getPosts(); render(); }
     catch (e) { say("Couldn't load posts. Check your API_URL in config.js, then try again.", true); }
   }
+  // Protection layer: no right-click / long-press menu, no image dragging (turn off with PROTECT_IMAGES: false)
+  if (C.PROTECT_IMAGES !== false) {
+    document.documentElement.classList.add("protect");
+    document.addEventListener("contextmenu", e => { if (!e.target.closest("input,textarea")) e.preventDefault(); });
+    document.addEventListener("dragstart", e => { if (e.target.tagName === "IMG") e.preventDefault(); });
+  }
   // Cards fade in as they scroll into view
   document.documentElement.classList.add("js");
   if ("IntersectionObserver" in window) {
