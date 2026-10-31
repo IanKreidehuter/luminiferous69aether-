@@ -3,6 +3,7 @@ window.CONFIG = {
   API_URL: "https://script.google.com/macros/s/AKfycbzMgJNS2h9IBrOJ3JoRJKlvkoFzCOUWIvfbYZCuOdK7SeyCM1k2d3Uoa8G9HtTdSmaRRg/exec",                      // paste your Apps Script Web App /exec URL (empty = sample posts)
   ASSET_BASE: "assets/",            // folder with your existing PNGs
   PROFILE: "assets/profile.png",    // your existing profile image path (separate asset)
+  PROTECT_IMAGES: true,             // true = block right-click / long-press menus and image dragging on the public site; false = off
   NAV: [                            // [section id, label, wide button file (desktop), round icon file (mobile tab bar)]
     ["home", "Home", "home.png", "home_round.png"], ["about", "About", "about.png", "about_round.png"],
     ["portfolio", "Portfolio", "portofolio.png", "portofolio_round.png"], ["posts", "Posts", "posts.png", "posts_round.png"],
