@@ -279,3 +279,20 @@ html.stage main[data-view=contact] .contact .paper{margin:0;font-size:24px;line-
 .grid.jr .thumb img{width:auto;height:100%;max-width:none}
 .grid.jr .cap{width:0;min-width:100%}
 .grid.jr .post:not(:has(.thumb)){width:170px}
+
+/* v7: post popup */
+.post{cursor:pointer}
+html:has(#postPop[open]){overflow:hidden}
+#postPop{width:min(720px,calc(100vw - 28px));max-height:calc(100dvh - 28px);padding:0;overflow:visible;background:#fffdf8;transform:none;animation:pp-in .35s cubic-bezier(.2,.9,.3,1.2)}
+#postPop::backdrop{background:rgba(80,60,120,.45);backdrop-filter:blur(2px)}
+#postPop::before{content:"";position:absolute;top:-12px;left:50%;width:90px;height:22px;transform:translateX(-50%) rotate(-3deg);background:repeating-linear-gradient(90deg,#ffb3c9 0 8px,#fff 8px 16px);opacity:.9}
+#postPop .pp-x{position:absolute;top:-14px;right:-8px;z-index:2;width:44px;height:44px;padding:0;font:22px/1 "Patrick Hand",cursive;color:var(--ink);background:var(--pink);border:3px solid #fff;border-radius:50%;box-shadow:2px 3px 0 rgba(60,50,90,.25);cursor:pointer;transition:transform .2s}
+#postPop .pp-x:hover{transform:rotate(90deg) scale(1.1)}
+.pp-body{max-height:calc(100dvh - 28px);overflow:auto;padding:22px 22px 24px;border-radius:inherit}
+.pp-img{display:flex;justify-content:center;margin-bottom:14px;background:var(--lav);border-radius:10px;overflow:hidden}
+.pp-img img{display:block;width:auto;height:auto;max-width:100%;max-height:60dvh}
+.pp-txt h3{font-size:30px}.pp-txt time{display:block;margin:2px 0 8px;font-size:16px;opacity:.7}
+.pp-txt p{margin:6px 0 14px;font-size:21px;white-space:pre-wrap;overflow-wrap:anywhere}
+.pp-link{display:inline-block;padding:8px 22px;border-radius:99px;background:var(--mint);color:var(--ink);text-decoration:none;box-shadow:2px 3px 0 rgba(60,50,90,.2)}
+@keyframes pp-in{from{opacity:0;transform:translateY(24px) scale(.92) rotate(-2deg)}}
+@media(prefers-reduced-motion:reduce){#postPop{animation:none}}
