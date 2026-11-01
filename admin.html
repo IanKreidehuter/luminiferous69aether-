@@ -4,7 +4,8 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="robots" content="noindex,nofollow"><title>Admin – Fahlan Aditya</title>
 <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Patrick+Hand&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<script>var V=Date.now()</script>
+<script>document.write('<link rel="stylesheet" href="style.css?v='+V+'">')</script>
 <style>
 .adm{max-width:1040px;margin:0 auto;padding:14px;display:grid;gap:16px}
 .adm h1{font-size:clamp(34px,6vw,52px);color:var(--purple);transform:rotate(-2deg)}
@@ -24,7 +25,7 @@ textarea{min-height:110px;resize:vertical}
 @media(min-width:860px){.main{display:grid;grid-template-columns:1.1fr 1fr;gap:16px;align-items:start}}
 @media(max-width:520px){.two{grid-template-columns:1fr}}
 </style>
-<link rel="stylesheet" href="admin-fx.css">
+<script>document.write('<link rel="stylesheet" href="admin-fx.css?v='+V+'">')</script>
 </head>
 <body>
 <div class="adm">
@@ -70,6 +71,6 @@ textarea{min-height:110px;resize:vertical}
     </section>
   </div>
 </div>
-<script src="config.js"></script><script src="admin.js"></script><script src="admin-fx.js" defer></script>
+<script>document.write('<script src="config.js?v='+V+'"><\/script><script src="admin.js?v='+V+'"><\/script><script src="admin-fx.js?v='+V+'" defer><\/script>')</script>
 </body>
 </html>
