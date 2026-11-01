@@ -168,8 +168,18 @@ html.loading body *,html.loading body *::before,html.loading body *::after{anima
     ppBody.innerHTML = `${img}<div class="pp-txt">${p.title ? `<h3>${esc(p.title)}</h3>` : ""}<time datetime="${esc(p.date)}">${fmt(p.date)}${p.category ? " · " + esc(p.category) : ""}</time>${t !== "image" && p.content ? `<p>${esc(p.content)}</p>` : ""}${link}</div>`;
     const vd = ppBody.querySelector(".pp-vid video");
     if (vd) {   // a file with no picture (audio only / unsupported video) gets a cover + player instead of a black box
-      const noPic = () => { if (vd.videoWidth) return; const box = vd.parentElement; box.classList.add("audio"); box.insertAdjacentHTML("beforeend", '<p class="pp-note">No picture in this browser. If this should be a video, the file may be HEVC (H.265): re-save it as H.264 so it plays on every device.</p>'); box.insertAdjacentHTML("afterbegin", `<div class="pp-cover" aria-hidden="true">${p.imageUrl ? `<img src="${esc(src(p.imageUrl))}" alt="">` : "🎵"}</div>`); };
-      vd.readyState >= 1 ? noPic() : vd.addEventListener("loadedmetadata", noPic, {once: true});
+      // Only switch to the sound-only layout after a couple of seconds of real playback in which not a single picture frame was shown.
+      // (Checking earlier was a mistake: it could wrongly squeeze a normal video.)
+      const watch = () => {
+        if (vd.currentTime < 2) return;
+        vd.removeEventListener("timeupdate", watch);
+        const q = vd.getVideoPlaybackQuality ? vd.getVideoPlaybackQuality() : null;
+        if (vd.videoWidth || !q || q.totalVideoFrames > 0) return;
+        const box = vd.parentElement; box.classList.add("audio");
+        box.insertAdjacentHTML("beforeend", '<p class="pp-note">No picture was found in this file, so only the sound plays.</p>');
+        box.insertAdjacentHTML("afterbegin", `<div class="pp-cover" aria-hidden="true">${p.imageUrl ? `<img src="${esc(src(p.imageUrl))}" alt="">` : "🎵"}</div>`);
+      };
+      vd.addEventListener("timeupdate", watch);
       vd.addEventListener("error", () => vd.parentElement.insertAdjacentHTML("beforeend", `<p class="pp-note">This file can't play in your browser. <a href="${esc(safe(vd.getAttribute("src")))}" target="_blank" rel="noopener noreferrer">Open it</a></p>`), {once: true});
     }
     pop.showModal(); ppBody.scrollTop = 0;
