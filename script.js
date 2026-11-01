@@ -61,7 +61,7 @@ html.loading body *,html.loading body *::before,html.loading body *::after{anima
   $("#nav").innerHTML = C.NAV.map(([id, label, f, r]) =>
     `<a href="#${id}" data-id="${id}" class="nb"><img class="wide" src="${esc(src(f))}" alt=""><img class="round" src="${esc(src(r || f))}" alt=""><span>${esc(label)}</span></a>`).join("");
   $("#info").innerHTML = C.INFO.map(([i, l, v]) => `<li><span aria-hidden="true">${i}</span><span><b>${esc(l)}:</b> ${esc(v)}</span></li>`).join("");
-  $("#skills").innerHTML = C.SKILLS.map(([i, t]) => `<li title="${esc(t)}"><span aria-hidden="true">${i}</span><em>${esc(t)}</em></li>`).join("");
+  $("#skills").innerHTML = C.SKILLS.map(([i, t], n) => `<li title="${esc(t)}" tabindex="0" role="button" data-n="${n}"><span aria-hidden="true">${i}</span><em>${esc(t)}</em></li>`).join("");
   $("#social").innerHTML = C.SOCIAL.map(s =>
     `<li><a href="${esc(safe(s.url))}" target="_blank" rel="noopener noreferrer" title="${esc(s.text)}"><img src="${esc(src(s.icon))}" alt=""><span>${esc(s.name)}</span></a></li>`).join("") +
     `<li><button type="button" class="moreBtn" aria-haspopup="dialog" title="More"><img src="${esc(src(C.MORE_ICON))}" alt=""><span>More</span></button></li>`;
@@ -94,7 +94,7 @@ html.loading body *,html.loading body *::before,html.loading body *::after{anima
   C.NAV.forEach(([id]) => { const s = document.getElementById(id); if (s) io.observe(s); });
 
   // Posts
-  const TYPES = [["all","All"],["image","Image"],["image_text","Image + Text"],["text","Text"],["link","Link"]];
+  const TYPES = [["all","All"],["image","Image"],["image_text","Image + Text"],["text","Text"],["link","Link"],["video","Video"]];
   const grid = $("#grid"), state = $("#state");
   let posts = [], filter = "all", shown = [];
   $("#filters").innerHTML = TYPES.map(([k, l]) => `<button type="button" data-k="${k}" aria-pressed="${k === "all"}">${l}</button>`).join("");
@@ -106,8 +106,23 @@ html.loading body *,html.loading body *::before,html.loading body *::after{anima
   };
   let pn = 0;
   const pk = () => C.POST_STICKERS?.length ? `<img class="pk" src="${esc(src(C.POST_STICKERS[pn++ % C.POST_STICKERS.length]))}" alt="">` : "";
+  const vInfo = u => {   // what kind of video link is this?
+    u = String(u || ""); let m;
+    if ((m = u.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?(?:.*&)?v=|embed\/|shorts\/|live\/))([\w-]{11})/))) return {k: "yt", id: m[1]};
+    if ((m = u.match(/vimeo\.com\/(?:video\/)?(\d+)/))) return {k: "vm", id: m[1]};
+    if ((m = u.match(/drive\.google\.com\/(?:file\/d\/|open\?id=|uc\?(?:[^#]*&)?id=)([\w-]{20,})/))) return {k: "gd", id: m[1]};
+    return /\.(mp4|webm|ogv|mov|m4v)(\?|#|$)/i.test(u) ? {k: "file", url: u} : null;
+  };
+  const vThumb = p => {  // card picture for a video: your poster, else the video's own thumbnail, else a placeholder
+    const v = vInfo(p.linkUrl), a = esc(p.title);
+    if (p.imageUrl) return `<img loading="lazy" src="${esc(src(p.imageUrl))}" alt="${a}">`;
+    if (v && v.k === "yt") return `<img loading="lazy" src="https://i.ytimg.com/vi/${v.id}/mqdefault.jpg" alt="${a}">`;
+    if (v && v.k === "gd") return `<img loading="lazy" src="https://drive.google.com/thumbnail?id=${v.id}&sz=w640" alt="${a}">`;
+    if (v && v.k === "file") return `<video muted playsinline preload="metadata" src="${esc(safe(v.url))}#t=0.1"></video>`;
+    return '<div class="vph"></div>';
+  };
   const card = p => {
-    const t = p.type, thumb = p.imageUrl && t !== "text" ? `<div class="thumb"><img loading="lazy" src="${esc(src(p.imageUrl))}" alt="${esc(p.title)}"></div>` : "";
+    const t = p.type, thumb = t === "video" ? `<div class="thumb">${vThumb(p)}<span class="vbadge" aria-hidden="true">▶</span></div>` : p.imageUrl && t !== "text" ? `<div class="thumb"><img loading="lazy" src="${esc(src(p.imageUrl))}" alt="${esc(p.title)}"></div>` : "";
     const body = `${thumb}<div class="cap">${p.title ? `<h3>${esc(p.title)}</h3>` : ""}${t !== "image" && p.content ? `<p>${esc(p.content)}</p>` : ""}<time datetime="${esc(p.date)}">${fmt(p.date)}</time>${pk()}</div>`;
     return t === "link" && p.linkUrl
       ? `<a class="post link" href="${esc(safe(p.linkUrl))}" target="_blank" rel="noopener noreferrer">${body}</a>`
@@ -132,9 +147,16 @@ html.loading body *,html.loading body *::before,html.loading body *::after{anima
   pop.innerHTML = '<button type="button" class="pp-x" aria-label="Close">✕</button><div class="pp-body"></div>';
   document.body.appendChild(pop);
   const ppBody = pop.querySelector(".pp-body");
+  const player = p => {   // video player for the popup
+    const v = vInfo(p.linkUrl);
+    if (!v) return p.imageUrl ? `<div class="pp-img"><img src="${esc(src(p.imageUrl))}" alt="${esc(p.title)}"></div>` : "";
+    if (v.k === "file") return `<div class="pp-img pp-vid"><video src="${esc(safe(v.url))}" ${p.imageUrl ? `poster="${esc(src(p.imageUrl))}"` : ""} controls autoplay playsinline controlslist="nodownload" disablepictureinpicture></video></div>`;
+    const u = v.k === "yt" ? `https://www.youtube-nocookie.com/embed/${v.id}?autoplay=1&rel=0` : v.k === "vm" ? `https://player.vimeo.com/video/${v.id}?autoplay=1` : `https://drive.google.com/file/d/${v.id}/preview`;
+    return `<div class="pp-frame"><iframe src="${u}" title="${esc(p.title || "Video")}" allow="autoplay; fullscreen; picture-in-picture; encrypted-media" allowfullscreen></iframe></div>`;
+  };
   const openPost = p => {
-    const t = p.type, img = p.imageUrl && t !== "text" ? `<div class="pp-img"><img src="${esc(src(p.imageUrl))}" alt="${esc(p.title)}"></div>` : "";
-    const link = t === "link" && p.linkUrl ? `<a class="pp-link" href="${esc(safe(p.linkUrl))}" target="_blank" rel="noopener noreferrer">Open link ↗</a>` : "";
+    const t = p.type, img = t === "video" ? player(p) : p.imageUrl && t !== "text" ? `<div class="pp-img"><img src="${esc(src(p.imageUrl))}" alt="${esc(p.title)}"></div>` : "";
+    const link = (t === "link" || (t === "video" && !vInfo(p.linkUrl))) && p.linkUrl ? `<a class="pp-link" href="${esc(safe(p.linkUrl))}" target="_blank" rel="noopener noreferrer">Open link ↗</a>` : "";
     ppBody.innerHTML = `${img}<div class="pp-txt">${p.title ? `<h3>${esc(p.title)}</h3>` : ""}<time datetime="${esc(p.date)}">${fmt(p.date)}${p.category ? " · " + esc(p.category) : ""}</time>${t !== "image" && p.content ? `<p>${esc(p.content)}</p>` : ""}${link}</div>`;
     pop.showModal(); ppBody.scrollTop = 0;
   };
@@ -144,6 +166,14 @@ html.loading body *,html.loading body *::before,html.loading body *::after{anima
     const p = shown[+el.dataset.i]; if (p) openPost(p);
   });
   grid.addEventListener("keydown", e => { if ((e.key === "Enter" || e.key === " ") && e.target.matches(".post[role=button]")) { e.preventDefault(); e.target.click(); } });
+  const openSkill = n => {   // Skills & Interests popup
+    const [ic, name, desc, tags] = C.SKILLS[n] || []; if (!name) return;
+    ppBody.innerHTML = `<div class="pp-skill"><div class="pp-emoji" aria-hidden="true">${esc(ic)}</div><h3>${esc(name)}</h3>${desc ? `<p>${esc(desc)}</p>` : ""}${tags && tags.length ? `<div class="pp-tags">${tags.map(x => `<span>${esc(x)}</span>`).join("")}</div>` : ""}</div>`;
+    pop.showModal(); ppBody.scrollTop = 0;
+  };
+  $("#skills").addEventListener("click", e => { const li = e.target.closest("li[data-n]"); if (li) openSkill(+li.dataset.n); });
+  $("#skills").addEventListener("keydown", e => { if ((e.key === "Enter" || e.key === " ") && e.target.matches("li[data-n]")) { e.preventDefault(); e.target.click(); } });
+  pop.addEventListener("close", () => { ppBody.innerHTML = ""; });   // also stops any playing video
   pop.querySelector(".pp-x").onclick = () => pop.close();
   pop.addEventListener("click", e => { if (e.target === pop) pop.close(); });
   // Stage mode (desktop): the whole site is drawn on a 1280x820 stage scaled to fit the screen; the nav swaps views
