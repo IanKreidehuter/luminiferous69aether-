@@ -57,24 +57,30 @@
     const id = b.dataset.id, p = posts.find(x => String(x.id) === id); if (!p) return;
     if (b.dataset.a === "edit") {
       editing = id; for (const k in F) F[k].value = k === "date" ? String(p.date || "").slice(0, 10) : (p[k] ?? "");
-      $("#formTitle").textContent = "Edit post"; $("#file").value = ""; fields(); preview(thumb(p.imageUrl));
+      $("#formTitle").textContent = "Edit post"; $("#file").value = ""; $("#vfile").value = ""; fields(); preview(thumb(p.imageUrl));
       $("#form").scrollIntoView({ behavior: "smooth" });
     } else if (confirm(`Delete "${p.title || "this post"}"? This can't be undone.`)) {
       try { busy(true); await call({ action: "delete", id }); if (editing === id) reset(); await refresh(); msg("Deleted."); }
       catch (err) { msg(err.message, true); } finally { busy(false); }
     }
   };
+  function readFile(f) {   // video as base64 (videos are not resized)
+    return new Promise((res, rej) => { const r = new FileReader(); r.onload = () => res({ data: String(r.result).split(",")[1], mime: f.type || "video/mp4", name: f.name }); r.onerror = () => rej(new Error("Couldn't read that video.")); r.readAsDataURL(f); });
+  }
   async function save(status) {
-    const t = F.type.value, file = $("#file").files[0];
+    const t = F.type.value, file = $("#file").files[0], vfile = $("#vfile").files[0], maxMB = C.MAX_VIDEO_MB || 25;
     try {
       if (["image", "image_text"].includes(t) && !file && !F.imageUrl.value.trim()) throw new Error("This type needs an image.");
       if (t === "text" && !F.title.value.trim() && !F.content.value.trim()) throw new Error("Add a title or some text.");
       if (t === "link" && !/^https?:\/\//i.test(F.linkUrl.value.trim())) throw new Error("Add a link starting with https://");
-      busy(true); let img = F.imageUrl.value.trim();
+      if (t === "video" && !vfile && !/^https?:\/\//i.test(F.linkUrl.value.trim())) throw new Error("Add a video file or a video link.");
+      if (t === "video" && vfile && vfile.size > maxMB * 1048576) throw new Error(`That video is over ${maxMB} MB. Upload it to Drive or YouTube and paste the link instead.`);
+      busy(true); let img = F.imageUrl.value.trim(), vlink = F.linkUrl.value.trim();
+      if (t === "video" && vfile) { msg("Uploading video… this can take a minute"); vlink = (await call({ action: "upload", ...(await readFile(vfile)) })).url; }
       if (file && t !== "text") { msg("Uploading image…"); img = (await call({ action: "upload", ...(await shrink(file)) })).url; }
       msg("Saving…");
       await call({ action: "save", post: { id: editing, title: F.title.value.trim(), type: t, content: t === "image" ? "" : F.content.value.trim(),
-        imageUrl: t === "text" ? "" : img, linkUrl: t === "link" ? F.linkUrl.value.trim() : "", category: F.category.value.trim(),
+        imageUrl: t === "text" ? "" : img, linkUrl: t === "link" ? F.linkUrl.value.trim() : t === "video" ? vlink : "", category: F.category.value.trim(),
         date: F.date.value || new Date().toISOString().slice(0, 10), status } });
       reset(); await refresh(); msg(status === "published" ? "Published!" : "Draft saved.");
     } catch (err) { msg(err.message, true); } finally { busy(false); }
