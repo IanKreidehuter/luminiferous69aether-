@@ -6,7 +6,8 @@
 <meta name="description" content="Fahlan Aditya's little scrapbook corner of the internet.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Patrick+Hand&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<script>var V=Date.now()</script>
+<script>document.write('<link rel="stylesheet" href="style.css?v='+V+'">')</script>
 </head>
 <body>
 <div class="wrap">
@@ -56,6 +57,6 @@
   </main>
 </div>
 <dialog id="more"><h3>More places</h3><ul id="moreList"></ul><button id="moreClose" type="button">Close</button></dialog>
-<script src="config.js"></script><script src="api.js"></script><script src="script.js"></script>
+<script>['config.js','api.js','script.js'].forEach(function(f){document.write('<script src="'+f+'?v='+V+'"><\/script>')})</script>
 </body>
 </html>
