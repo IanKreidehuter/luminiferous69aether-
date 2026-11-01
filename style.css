@@ -316,9 +316,12 @@ html:has(#postPop[open]){overflow:hidden}
 
 /* v9: video cards keep a fixed 16:9 picture box, whatever the file does; neater Home row; video popup */
 .thumb img{font-size:0;color:transparent}
-.post.video .thumb{aspect-ratio:16/9;background:var(--lav)}
-.grid.jr .post.video .thumb{width:calc(var(--th) * 16 / 9);min-width:0}
-.post.video .thumb img,.post.video .thumb video,.post.video .thumb .vph{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;aspect-ratio:auto}
+.post.video .thumb{background:var(--lav)}
+/* one-row layouts: the box takes the picture's real shape (JS sets --r), never wider than the screen */
+.grid.jr{--cw:calc(100vw - 76px)}
+.grid.jr .thumb{--r:1.3333;aspect-ratio:var(--r);height:auto;width:min(calc(var(--th) * var(--r)),var(--cw));min-width:72px;display:block}
+.grid.jr .post.video .thumb{--r:1.7778}
+.grid.jr .thumb img,.grid.jr .thumb video,.grid.jr .thumb .vph{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;aspect-ratio:auto}
 .thumb.noimg{background:repeating-linear-gradient(45deg,var(--pink) 0 10px,var(--lav) 10px 20px)}
 .thumb.noimg img{display:none}
 html.stage .grid.jr .cap h3{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -330,3 +333,4 @@ html.stage .grid.jr .cap p{display:none}
 .pp-cover{display:grid;place-items:center;width:100%;min-height:150px;font-size:84px;animation:pp-bob 2.4s ease-in-out infinite}
 .pp-cover img{width:auto;max-width:100%;max-height:40dvh;border-radius:10px}
 .pp-note{margin:8px 12px;font-size:17px;color:#a8243f}
+.pp-vid.audio .pp-note{margin:0 8px;color:var(--ink);font-size:16px;text-align:center}
