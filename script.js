@@ -42,6 +42,12 @@ html.loading body *,html.loading body *::before,html.loading body *::after{anima
 
   // Missing assets hide themselves instead of showing broken icons.
   document.addEventListener("error", e => { if (e.target.tagName === "IMG") { e.target.classList.add("broken"); const th = e.target.closest(".thumb"); if (th) th.classList.add("noimg"); } }, true);
+  const setAR = el => {   // give the card the picture's real shape (width / height)
+    const th = el.closest(".thumb"), w = el.naturalWidth || el.videoWidth, h = el.naturalHeight || el.videoHeight;
+    if (th && w && h) th.style.setProperty("--r", (w / h).toFixed(4));
+  };
+  document.addEventListener("load", e => { if (e.target.tagName === "IMG") setAR(e.target); }, true);
+  document.addEventListener("loadedmetadata", e => { if (e.target.tagName === "VIDEO") setAR(e.target); }, true);
 
   $("#profile").src = $("#profile2").src = C.PROFILE;
   $("#decoHero").innerHTML = stickers(C.DECO_HERO);
@@ -162,7 +168,7 @@ html.loading body *,html.loading body *::before,html.loading body *::after{anima
     ppBody.innerHTML = `${img}<div class="pp-txt">${p.title ? `<h3>${esc(p.title)}</h3>` : ""}<time datetime="${esc(p.date)}">${fmt(p.date)}${p.category ? " · " + esc(p.category) : ""}</time>${t !== "image" && p.content ? `<p>${esc(p.content)}</p>` : ""}${link}</div>`;
     const vd = ppBody.querySelector(".pp-vid video");
     if (vd) {   // a file with no picture (audio only / unsupported video) gets a cover + player instead of a black box
-      const noPic = () => { if (vd.videoWidth) return; const box = vd.parentElement; box.classList.add("audio"); box.insertAdjacentHTML("afterbegin", `<div class="pp-cover" aria-hidden="true">${p.imageUrl ? `<img src="${esc(src(p.imageUrl))}" alt="">` : "🎵"}</div>`); };
+      const noPic = () => { if (vd.videoWidth) return; const box = vd.parentElement; box.classList.add("audio"); box.insertAdjacentHTML("beforeend", '<p class="pp-note">No picture in this browser. If this should be a video, the file may be HEVC (H.265): re-save it as H.264 so it plays on every device.</p>'); box.insertAdjacentHTML("afterbegin", `<div class="pp-cover" aria-hidden="true">${p.imageUrl ? `<img src="${esc(src(p.imageUrl))}" alt="">` : "🎵"}</div>`); };
       vd.readyState >= 1 ? noPic() : vd.addEventListener("loadedmetadata", noPic, {once: true});
       vd.addEventListener("error", () => vd.parentElement.insertAdjacentHTML("beforeend", `<p class="pp-note">This file can't play in your browser. <a href="${esc(safe(vd.getAttribute("src")))}" target="_blank" rel="noopener noreferrer">Open it</a></p>`), {once: true});
     }
