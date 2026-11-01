@@ -4,6 +4,7 @@ window.CONFIG = {
   ASSET_BASE: "assets/",            // folder with your existing PNGs
   PROFILE: "assets/profile.png",    // your existing profile image path (separate asset)
   PROTECT_IMAGES: true,             // true = block right-click / long-press menus and image dragging on the public site; false = off
+  MAX_VIDEO_MB: 25,                 // admin: biggest video you can upload directly (bigger = paste a link instead)
   NAV: [                            // [section id, label, wide button file (desktop), round icon file (mobile tab bar)]
     ["home", "Home", "home.png", "home_round.png"], ["about", "About", "about.png", "about_round.png"],
     ["portfolio", "Portfolio", "portofolio.png", "portofolio_round.png"], ["posts", "Posts", "posts.png", "posts_round.png"],
@@ -15,8 +16,17 @@ window.CONFIG = {
     ["🌱", "Languages", "Indonesian, English, Japanese (N5-N4), German, Italian"],
     ["🎮", "Interests", "Languages, Tech, Games, Art, Music, Websites, Random things"]
   ],
-  SKILLS: [["💻","Web Development"],["🎨","Art & Design"],["📚","Language Learning"],["🎮","Gaming"],
-           ["🎵","Music"],["📷","Photography"],["💡","Ideas & Projects"],["🎲","Random Activities"]],
+  // [emoji, name, short text for the popup, tags]  <- edit the texts freely
+  SKILLS: [
+    ["💻","Web Development","I like building little websites from scratch, like this one. Making things look cute and work smoothly is my favourite part.",["HTML","CSS","JavaScript","Google Apps Script"]],
+    ["🎨","Art & Design","Colourful, handmade, crayon-style things make me happy. Doodles, stickers and playful layouts are my thing.",["Doodles","Stickers","Layouts","Kidcore"]],
+    ["📚","Language Learning","Collecting languages is one of my favourite hobbies, and I'm always learning a little more.",["Indonesian","English","Japanese (N5-N4)","German","Italian"]],
+    ["🎮","Gaming","Playing games to relax, have fun and get lost in a good story.",["Relax","Fun"]],
+    ["🎵","Music","Music is always playing while I work, draw and code.",["Listening","Vibes"]],
+    ["📷","Photography","Catching small everyday moments and pretty places.",["Everyday","Places"]],
+    ["💡","Ideas & Projects","I keep a messy pile of random ideas and turn the fun ones into projects.",["Ideas","Projects","Experiments"]],
+    ["🎲","Random Activities","Just chilling, trying new things, and seeing what comes next.",["Chilling","New things"]]
+  ],
   SOCIAL: [
     { name: "WhatsApp",  icon: "whatsapp.png",  text: "+6285161840928",              url: "https://wa.me/6285161840928" },
     { name: "Email",     icon: "email.png",     text: "froylanfahlanaditya@gmail.com", url: "mailto:froylanfahlanaditya@gmail.com" },
