@@ -209,6 +209,10 @@ html.loading body *,html.loading body *::before,html.loading body *::after{anima
     const ro = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { en.target.classList.add("in"); ro.unobserve(en.target); } }), {threshold: .06});
     document.querySelectorAll(".hero,.card").forEach(e => { e.classList.add("rv"); ro.observe(e); });
   }
+  // Always fresh: reload if the browser restores an old copy (back/forward cache); refresh posts when an old tab is shown again
+  let lastLoad = Date.now();
+  addEventListener("pageshow", e => { if (e.persisted) location.reload(); });
+  document.addEventListener("visibilitychange", () => { if (!document.hidden && Date.now() - lastLoad > 120000) { lastLoad = Date.now(); load(); } });
   // Loading screen: hide it once fonts, stickers and the first posts request are done (12 s max)
   const loader = $("#loader"), bar = $("#loaderBar");
   const settle = i => i.complete ? Promise.resolve() : new Promise(r => { i.addEventListener("load", r, {once: true}); i.addEventListener("error", r, {once: true}); });
