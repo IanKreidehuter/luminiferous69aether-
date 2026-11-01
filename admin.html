@@ -44,13 +44,14 @@ textarea{min-height:110px;resize:vertical}
       <h2 id="formTitle">New post</h2>
       <form id="form">
         <div class="two">
-          <label>Type<select id="type"><option value="image">Image only</option><option value="image_text">Image + Text</option><option value="text">Text only</option><option value="link">Link / Media</option></select></label>
+          <label>Type<select id="type"><option value="image">Image only</option><option value="image_text">Image + Text</option><option value="text">Text only</option><option value="link">Link / Media</option><option value="video">Video</option></select></label>
           <label>Date<input id="date" type="date"></label>
         </div>
         <label>Title<input id="title" maxlength="120"></label>
-        <label data-t="image_text text link">Text / description<textarea id="content"></textarea></label>
-        <label data-t="link">Link URL<input id="linkUrl" type="url" placeholder="https://"></label>
-        <div data-t="image image_text link" class="two">
+        <label data-t="image_text text link video">Text / description<textarea id="content"></textarea></label>
+        <label data-t="link video">Link / video URL<input id="linkUrl" type="url" placeholder="https://"></label>
+        <label data-t="video">Video file (up to 25 MB) - or paste a YouTube / Drive / .mp4 link above<input id="vfile" type="file" accept="video/*"></label>
+        <div data-t="image image_text link video" class="two">
           <label>Image file<input id="file" type="file" accept="image/*"></label>
           <label>or image URL<input id="imageUrl" placeholder="filled in after upload"></label>
         </div>
