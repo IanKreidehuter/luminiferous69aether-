@@ -41,7 +41,7 @@ html.loading body *,html.loading body *::before,html.loading body *::after{anima
   const stickers = l => l.map(([n, st, cl]) => `<img class="sticker ${cl || ""}" src="${esc(src(n))}" alt="" style="${esc(st)}">`).join("");
 
   // Missing assets hide themselves instead of showing broken icons.
-  document.addEventListener("error", e => { if (e.target.tagName === "IMG") e.target.classList.add("broken"); }, true);
+  document.addEventListener("error", e => { if (e.target.tagName === "IMG") { e.target.classList.add("broken"); const th = e.target.closest(".thumb"); if (th) th.classList.add("noimg"); } }, true);
 
   $("#profile").src = $("#profile2").src = C.PROFILE;
   $("#decoHero").innerHTML = stickers(C.DECO_HERO);
@@ -51,9 +51,10 @@ html.loading body *,html.loading body *::before,html.loading body *::after{anima
     const h = side.offsetHeight; side.innerHTML = "";
     if (!h || !pool.length) return;
     let html = "", i = 0;
-    for (let y = 6; y < h - 70; y += 118, i++) {
+    const big = h > 400;   // short sidebar = smaller, closer stickers
+    for (let y = 6; y < h - (big ? 70 : 46); y += big ? 118 : 66, i++) {
       const f = pool[i % pool.length], tw = /love|yellow/.test(f) ? " twinkle" : "";
-      html += `<img class="sticker${tw}" src="${esc(src(f))}" alt="" style="left:${(i % 2 ? 48 : 4) + (i * 11) % 14}%;top:${y}px;width:${58 + (i * 29) % 44}px;--r:${(i * 19) % 24 - 12}deg;--d:-${(i * 7) % 5}s">`;
+      html += `<img class="sticker${tw}" src="${esc(src(f))}" alt="" style="left:${(i % 2 ? 48 : 4) + (i * 11) % 14}%;top:${y}px;width:${(big ? 58 : 40) + (i * 29) % (big ? 44 : 26)}px;--r:${(i * 19) % 24 - 12}deg;--d:-${(i * 7) % 5}s">`;
     }
     side.innerHTML = html;
   };
@@ -137,9 +138,10 @@ html.loading body *,html.loading body *::before,html.loading body *::after{anima
     [...grid.children].forEach((el, i) => { el.dataset.i = i; if (el.tagName !== "A") { el.tabIndex = 0; el.setAttribute("role", "button"); } });
   }
   async function load() {
-    say("Loading posts…");
+    const c = !posts.length && API.cached && API.cached();   // show the last good list at once, then refresh it
+    if (c && c.length) { posts = c; render(); } else if (!posts.length) say("Loading posts…");
     try { posts = await API.getPosts(); render(); }
-    catch (e) { say("Couldn't load posts. Check your API_URL in config.js, then try again.", true); }
+    catch (e) { if (!posts.length) say("Couldn't load posts. Check your API_URL in config.js, then try again.", true); }
   }
   // Post popup: click any post to read it bigger; close with the button, Esc or a click outside
   const pop = document.createElement("dialog");
@@ -158,6 +160,12 @@ html.loading body *,html.loading body *::before,html.loading body *::after{anima
     const t = p.type, img = t === "video" ? player(p) : p.imageUrl && t !== "text" ? `<div class="pp-img"><img src="${esc(src(p.imageUrl))}" alt="${esc(p.title)}"></div>` : "";
     const link = (t === "link" || (t === "video" && !vInfo(p.linkUrl))) && p.linkUrl ? `<a class="pp-link" href="${esc(safe(p.linkUrl))}" target="_blank" rel="noopener noreferrer">Open link ↗</a>` : "";
     ppBody.innerHTML = `${img}<div class="pp-txt">${p.title ? `<h3>${esc(p.title)}</h3>` : ""}<time datetime="${esc(p.date)}">${fmt(p.date)}${p.category ? " · " + esc(p.category) : ""}</time>${t !== "image" && p.content ? `<p>${esc(p.content)}</p>` : ""}${link}</div>`;
+    const vd = ppBody.querySelector(".pp-vid video");
+    if (vd) {   // a file with no picture (audio only / unsupported video) gets a cover + player instead of a black box
+      const noPic = () => { if (vd.videoWidth) return; const box = vd.parentElement; box.classList.add("audio"); box.insertAdjacentHTML("afterbegin", `<div class="pp-cover" aria-hidden="true">${p.imageUrl ? `<img src="${esc(src(p.imageUrl))}" alt="">` : "🎵"}</div>`); };
+      vd.readyState >= 1 ? noPic() : vd.addEventListener("loadedmetadata", noPic, {once: true});
+      vd.addEventListener("error", () => vd.parentElement.insertAdjacentHTML("beforeend", `<p class="pp-note">This file can't play in your browser. <a href="${esc(safe(vd.getAttribute("src")))}" target="_blank" rel="noopener noreferrer">Open it</a></p>`), {once: true});
+    }
     pop.showModal(); ppBody.scrollTop = 0;
   };
   grid.addEventListener("click", e => {
