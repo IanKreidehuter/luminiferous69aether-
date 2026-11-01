@@ -13,12 +13,12 @@ const API = (() => {
       const t = setTimeout(() => { end(); reject(new Error("timeout")); }, ms);
       window[cb] = d => { end(); resolve(d); };
       s.onerror = () => { end(); reject(new Error("network")); };
-      s.src = base + (base.includes("?") ? "&" : "?") + "action=posts&callback=" + cb;
+      s.src = base + (base.includes("?") ? "&" : "?") + "action=posts&_=" + Date.now() + "&callback=" + cb;
       document.head.appendChild(s);
     });
   }
   async function getPosts() {
-    const raw = CONFIG.API_URL ? await jsonp(CONFIG.API_URL) : { ok: true, posts: SAMPLE };
+    const raw = CONFIG.API_URL ? await jsonp(CONFIG.API_URL).catch(() => jsonp(CONFIG.API_URL)) : { ok: true, posts: SAMPLE };
     if (!raw || !raw.ok) throw new Error((raw && raw.error) || "bad response");
     return raw.posts.filter(p => p.status === "published")
                     .sort((a, b) => new Date(b.date) - new Date(a.date));
