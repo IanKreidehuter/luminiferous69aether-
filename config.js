@@ -4,6 +4,7 @@ window.CONFIG = {
   ASSET_BASE: "assets/",            // folder with your existing PNGs
   PROFILE: "assets/profile.png",    // your existing profile image path (separate asset)
   PROTECT_IMAGES: true,             // true = block right-click / long-press menus and image dragging on the public site; false = off
+  API_TIMEOUT_MS: 20000,            // how long to wait for the posts API before trying the next method
   MAX_VIDEO_MB: 25,                 // admin: biggest video you can upload directly (bigger = paste a link instead)
   NAV: [                            // [section id, label, wide button file (desktop), round icon file (mobile tab bar)]
     ["home", "Home", "home.png", "home_round.png"], ["about", "About", "about.png", "about_round.png"],
