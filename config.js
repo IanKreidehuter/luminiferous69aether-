@@ -36,7 +36,11 @@ window.CONFIG = {
   ],
   MORE_ICON: "more.png",
   POST_STICKERS: ["yellow_love.png", "love.png"],   // small stickers on post cards
-  MORE_LINKS: [],                   // [{label:"Name", url:"https://..."}] shown in the "More" popup
+  // Links shown in the "More" popup. To add a future link, copy one line and change it (icon is optional).
+  MORE_LINKS: [
+    { icon: "💌", label: "Anonymous Message", url: "https://iankreidehuter.space/anonymous/mostlytsar" },
+    { icon: "📁", label: "Documents Archive", url: "https://iankreidehuter.space/documents/" }
+  ],
   CONTACT: ["Email", "WhatsApp", "Instagram"],
   // Stickers: [file, "inline css", optional class: spin | twinkle]. Hero sizes are % of the hero so they scale.
   DECO_HERO: [
