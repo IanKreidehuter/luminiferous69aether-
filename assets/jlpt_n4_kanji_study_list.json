@@ -1,0 +1,3342 @@
+{
+  "title": "JLPT N4 Kanji Study List",
+  "level": "JLPT N4",
+  "kanji_count": 120,
+  "note": "The JLPT does not publish an official fixed kanji list. This is a curated study list of kanji commonly taught for N4 preparation; exact lists vary by textbook. Onyomi are written in katakana and kunyomi in hiragana. Vocabulary examples are study examples, not guaranteed exam questions.",
+  "kanji": [
+    {
+      "kanji": "会",
+      "meaning": "meet; meeting",
+      "onyomi": [
+        "カイ",
+        "エ"
+      ],
+      "kunyomi": [
+        "あ(う)"
+      ],
+      "standalone_words": [
+        {
+          "word": "会う",
+          "reading": "あう",
+          "meaning": "meet"
+        },
+        {
+          "word": "会社",
+          "reading": "かいしゃ",
+          "meaning": "company"
+        },
+        {
+          "word": "会話",
+          "reading": "かいわ",
+          "meaning": "conversation"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "同",
+      "meaning": "same",
+      "onyomi": [
+        "ドウ"
+      ],
+      "kunyomi": [
+        "おな(じ)"
+      ],
+      "standalone_words": [
+        {
+          "word": "同じ",
+          "reading": "おなじ",
+          "meaning": "same"
+        },
+        {
+          "word": "同時",
+          "reading": "どうじ",
+          "meaning": "same time"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "事",
+      "meaning": "thing; matter",
+      "onyomi": [
+        "ジ"
+      ],
+      "kunyomi": [
+        "こと"
+      ],
+      "standalone_words": [
+        {
+          "word": "事",
+          "reading": "こと",
+          "meaning": "thing"
+        },
+        {
+          "word": "仕事",
+          "reading": "しごと",
+          "meaning": "work"
+        },
+        {
+          "word": "食事",
+          "reading": "しょくじ",
+          "meaning": "meal"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "自",
+      "meaning": "oneself",
+      "onyomi": [
+        "ジ",
+        "シ"
+      ],
+      "kunyomi": [
+        "みずか(ら)"
+      ],
+      "standalone_words": [
+        {
+          "word": "自分",
+          "reading": "じぶん",
+          "meaning": "oneself"
+        },
+        {
+          "word": "自由",
+          "reading": "じゆう",
+          "meaning": "freedom"
+        }
+      ],
+      "combinations": [
+        {
+          "word": "自転車",
+          "reading": "じてんしゃ",
+          "meaning": "bicycle"
+        }
+      ]
+    },
+    {
+      "kanji": "社",
+      "meaning": "company; shrine",
+      "onyomi": [
+        "シャ"
+      ],
+      "kunyomi": [
+        "やしろ"
+      ],
+      "standalone_words": [
+        {
+          "word": "会社",
+          "reading": "かいしゃ",
+          "meaning": "company"
+        },
+        {
+          "word": "社会",
+          "reading": "しゃかい",
+          "meaning": "society"
+        },
+        {
+          "word": "神社",
+          "reading": "じんじゃ",
+          "meaning": "shrine"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "者",
+      "meaning": "person",
+      "onyomi": [
+        "シャ"
+      ],
+      "kunyomi": [
+        "もの"
+      ],
+      "standalone_words": [
+        {
+          "word": "医者",
+          "reading": "いしゃ",
+          "meaning": "doctor"
+        },
+        {
+          "word": "若者",
+          "reading": "わかもの",
+          "meaning": "young person"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "地",
+      "meaning": "ground; place",
+      "onyomi": [
+        "チ",
+        "ジ"
+      ],
+      "kunyomi": [],
+      "standalone_words": [
+        {
+          "word": "地図",
+          "reading": "ちず",
+          "meaning": "map"
+        },
+        {
+          "word": "地下",
+          "reading": "ちか",
+          "meaning": "underground"
+        },
+        {
+          "word": "地震",
+          "reading": "じしん",
+          "meaning": "earthquake"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "業",
+      "meaning": "work; business",
+      "onyomi": [
+        "ギョウ",
+        "ゴウ"
+      ],
+      "kunyomi": [
+        "わざ"
+      ],
+      "standalone_words": [
+        {
+          "word": "授業",
+          "reading": "じゅぎょう",
+          "meaning": "class"
+        },
+        {
+          "word": "卒業",
+          "reading": "そつぎょう",
+          "meaning": "graduation"
+        },
+        {
+          "word": "工業",
+          "reading": "こうぎょう",
+          "meaning": "industry"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "方",
+      "meaning": "direction; way",
+      "onyomi": [
+        "ホウ"
+      ],
+      "kunyomi": [
+        "かた"
+      ],
+      "standalone_words": [
+        {
+          "word": "方法",
+          "reading": "ほうほう",
+          "meaning": "method"
+        },
+        {
+          "word": "夕方",
+          "reading": "ゆうがた",
+          "meaning": "evening"
+        },
+        {
+          "word": "地方",
+          "reading": "ちほう",
+          "meaning": "region"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "新",
+      "meaning": "new",
+      "onyomi": [
+        "シン"
+      ],
+      "kunyomi": [
+        "あたら(しい)",
+        "あら(た)"
+      ],
+      "standalone_words": [
+        {
+          "word": "新聞",
+          "reading": "しんぶん",
+          "meaning": "newspaper"
+        },
+        {
+          "word": "新年",
+          "reading": "しんねん",
+          "meaning": "New Year"
+        }
+      ],
+      "combinations": [
+        {
+          "word": "新しい",
+          "reading": "あたらしい",
+          "meaning": "new"
+        }
+      ]
+    },
+    {
+      "kanji": "場",
+      "meaning": "place",
+      "onyomi": [
+        "ジョウ"
+      ],
+      "kunyomi": [
+        "ば"
+      ],
+      "standalone_words": [
+        {
+          "word": "場所",
+          "reading": "ばしょ",
+          "meaning": "place"
+        },
+        {
+          "word": "工場",
+          "reading": "こうじょう",
+          "meaning": "factory"
+        },
+        {
+          "word": "場合",
+          "reading": "ばあい",
+          "meaning": "case"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "員",
+      "meaning": "member",
+      "onyomi": [
+        "イン"
+      ],
+      "kunyomi": [],
+      "standalone_words": [
+        {
+          "word": "店員",
+          "reading": "てんいん",
+          "meaning": "shop assistant"
+        },
+        {
+          "word": "駅員",
+          "reading": "えきいん",
+          "meaning": "station staff"
+        }
+      ],
+      "combinations": [
+        {
+          "word": "会社員",
+          "reading": "かいしゃいん",
+          "meaning": "office worker"
+        }
+      ]
+    },
+    {
+      "kanji": "立",
+      "meaning": "stand",
+      "onyomi": [
+        "リツ",
+        "リュウ"
+      ],
+      "kunyomi": [
+        "た(つ)",
+        "た(てる)"
+      ],
+      "standalone_words": [
+        {
+          "word": "立つ",
+          "reading": "たつ",
+          "meaning": "stand"
+        },
+        {
+          "word": "国立",
+          "reading": "こくりつ",
+          "meaning": "national"
+        }
+      ],
+      "combinations": [
+        {
+          "word": "役に立つ",
+          "reading": "やくにたつ",
+          "meaning": "be useful"
+        }
+      ]
+    },
+    {
+      "kanji": "開",
+      "meaning": "open",
+      "onyomi": [
+        "カイ"
+      ],
+      "kunyomi": [
+        "ひら(く)",
+        "あ(く)",
+        "あ(ける)"
+      ],
+      "standalone_words": [
+        {
+          "word": "開く",
+          "reading": "あく",
+          "meaning": "open"
+        },
+        {
+          "word": "開店",
+          "reading": "かいてん",
+          "meaning": "shop opening"
+        }
+      ],
+      "combinations": [
+        {
+          "word": "開ける",
+          "reading": "あける",
+          "meaning": "open something"
+        }
+      ]
+    },
+    {
+      "kanji": "手",
+      "meaning": "hand",
+      "onyomi": [
+        "シュ"
+      ],
+      "kunyomi": [
+        "て"
+      ],
+      "standalone_words": [
+        {
+          "word": "手",
+          "reading": "て",
+          "meaning": "hand"
+        },
+        {
+          "word": "手紙",
+          "reading": "てがみ",
+          "meaning": "letter"
+        },
+        {
+          "word": "上手",
+          "reading": "じょうず",
+          "meaning": "skillful"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "力",
+      "meaning": "power",
+      "onyomi": [
+        "リョク",
+        "リキ"
+      ],
+      "kunyomi": [
+        "ちから"
+      ],
+      "standalone_words": [
+        {
+          "word": "力",
+          "reading": "ちから",
+          "meaning": "strength"
+        },
+        {
+          "word": "努力",
+          "reading": "どりょく",
+          "meaning": "effort"
+        },
+        {
+          "word": "能力",
+          "reading": "のうりょく",
+          "meaning": "ability"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "問",
+      "meaning": "question",
+      "onyomi": [
+        "モン"
+      ],
+      "kunyomi": [
+        "と(う)"
+      ],
+      "standalone_words": [
+        {
+          "word": "問う",
+          "reading": "とう",
+          "meaning": "ask"
+        },
+        {
+          "word": "問題",
+          "reading": "もんだい",
+          "meaning": "problem"
+        },
+        {
+          "word": "質問",
+          "reading": "しつもん",
+          "meaning": "question"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "代",
+      "meaning": "generation; substitute",
+      "onyomi": [
+        "ダイ",
+        "タイ"
+      ],
+      "kunyomi": [
+        "か(わる)",
+        "か(える)",
+        "よ"
+      ],
+      "standalone_words": [
+        {
+          "word": "時代",
+          "reading": "じだい",
+          "meaning": "era"
+        },
+        {
+          "word": "代表",
+          "reading": "だいひょう",
+          "meaning": "representative"
+        },
+        {
+          "word": "代金",
+          "reading": "だいきん",
+          "meaning": "price"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "明",
+      "meaning": "bright",
+      "onyomi": [
+        "メイ",
+        "ミョウ"
+      ],
+      "kunyomi": [
+        "あか(るい)",
+        "あ(ける)"
+      ],
+      "standalone_words": [
+        {
+          "word": "説明",
+          "reading": "せつめい",
+          "meaning": "explanation"
+        },
+        {
+          "word": "明日",
+          "reading": "あした",
+          "meaning": "tomorrow"
+        }
+      ],
+      "combinations": [
+        {
+          "word": "明るい",
+          "reading": "あかるい",
+          "meaning": "bright"
+        }
+      ]
+    },
+    {
+      "kanji": "動",
+      "meaning": "move",
+      "onyomi": [
+        "ドウ"
+      ],
+      "kunyomi": [
+        "うご(く)",
+        "うご(かす)"
+      ],
+      "standalone_words": [
+        {
+          "word": "動く",
+          "reading": "うごく",
+          "meaning": "move"
+        },
+        {
+          "word": "動物",
+          "reading": "どうぶつ",
+          "meaning": "animal"
+        },
+        {
+          "word": "運動",
+          "reading": "うんどう",
+          "meaning": "exercise"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "京",
+      "meaning": "capital",
+      "onyomi": [
+        "キョウ",
+        "ケイ"
+      ],
+      "kunyomi": [],
+      "standalone_words": [
+        {
+          "word": "東京",
+          "reading": "とうきょう",
+          "meaning": "Tokyo"
+        },
+        {
+          "word": "京都",
+          "reading": "きょうと",
+          "meaning": "Kyoto"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "目",
+      "meaning": "eye",
+      "onyomi": [
+        "モク",
+        "ボク"
+      ],
+      "kunyomi": [
+        "め"
+      ],
+      "standalone_words": [
+        {
+          "word": "目",
+          "reading": "め",
+          "meaning": "eye"
+        },
+        {
+          "word": "目的",
+          "reading": "もくてき",
+          "meaning": "purpose"
+        },
+        {
+          "word": "注目",
+          "reading": "ちゅうもく",
+          "meaning": "attention"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "通",
+      "meaning": "pass through",
+      "onyomi": [
+        "ツウ",
+        "ツ"
+      ],
+      "kunyomi": [
+        "とお(る)",
+        "とお(す)",
+        "かよ(う)"
+      ],
+      "standalone_words": [
+        {
+          "word": "通る",
+          "reading": "とおる",
+          "meaning": "pass"
+        },
+        {
+          "word": "交通",
+          "reading": "こうつう",
+          "meaning": "traffic"
+        },
+        {
+          "word": "普通",
+          "reading": "ふつう",
+          "meaning": "ordinary"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "言",
+      "meaning": "say",
+      "onyomi": [
+        "ゲン",
+        "ゴン"
+      ],
+      "kunyomi": [
+        "い(う)",
+        "こと"
+      ],
+      "standalone_words": [
+        {
+          "word": "言う",
+          "reading": "いう",
+          "meaning": "say"
+        },
+        {
+          "word": "言葉",
+          "reading": "ことば",
+          "meaning": "word"
+        },
+        {
+          "word": "伝言",
+          "reading": "でんごん",
+          "meaning": "message"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "理",
+      "meaning": "reason",
+      "onyomi": [
+        "リ"
+      ],
+      "kunyomi": [],
+      "standalone_words": [
+        {
+          "word": "理由",
+          "reading": "りゆう",
+          "meaning": "reason"
+        },
+        {
+          "word": "料理",
+          "reading": "りょうり",
+          "meaning": "cooking"
+        },
+        {
+          "word": "理解",
+          "reading": "りかい",
+          "meaning": "understanding"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "体",
+      "meaning": "body",
+      "onyomi": [
+        "タイ",
+        "テイ"
+      ],
+      "kunyomi": [
+        "からだ"
+      ],
+      "standalone_words": [
+        {
+          "word": "体",
+          "reading": "からだ",
+          "meaning": "body"
+        },
+        {
+          "word": "体育",
+          "reading": "たいいく",
+          "meaning": "physical education"
+        },
+        {
+          "word": "体重",
+          "reading": "たいじゅう",
+          "meaning": "body weight"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "田",
+      "meaning": "rice field",
+      "onyomi": [
+        "デン"
+      ],
+      "kunyomi": [
+        "た"
+      ],
+      "standalone_words": [
+        {
+          "word": "田",
+          "reading": "た",
+          "meaning": "rice field"
+        }
+      ],
+      "combinations": [
+        {
+          "word": "田んぼ",
+          "reading": "たんぼ",
+          "meaning": "rice paddy"
+        }
+      ]
+    },
+    {
+      "kanji": "主",
+      "meaning": "main; owner",
+      "onyomi": [
+        "シュ",
+        "ス"
+      ],
+      "kunyomi": [
+        "ぬし",
+        "おも"
+      ],
+      "standalone_words": [
+        {
+          "word": "主人",
+          "reading": "しゅじん",
+          "meaning": "master"
+        },
+        {
+          "word": "主語",
+          "reading": "しゅご",
+          "meaning": "subject"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "題",
+      "meaning": "topic; title",
+      "onyomi": [
+        "ダイ"
+      ],
+      "kunyomi": [],
+      "standalone_words": [
+        {
+          "word": "問題",
+          "reading": "もんだい",
+          "meaning": "problem"
+        },
+        {
+          "word": "宿題",
+          "reading": "しゅくだい",
+          "meaning": "homework"
+        },
+        {
+          "word": "題名",
+          "reading": "だいめい",
+          "meaning": "title"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "意",
+      "meaning": "meaning; intention",
+      "onyomi": [
+        "イ"
+      ],
+      "kunyomi": [],
+      "standalone_words": [
+        {
+          "word": "意味",
+          "reading": "いみ",
+          "meaning": "meaning"
+        },
+        {
+          "word": "意見",
+          "reading": "いけん",
+          "meaning": "opinion"
+        },
+        {
+          "word": "注意",
+          "reading": "ちゅうい",
+          "meaning": "caution"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "不",
+      "meaning": "not; un-",
+      "onyomi": [
+        "フ",
+        "ブ"
+      ],
+      "kunyomi": [],
+      "standalone_words": [
+        {
+          "word": "不便",
+          "reading": "ふべん",
+          "meaning": "inconvenient"
+        },
+        {
+          "word": "不安",
+          "reading": "ふあん",
+          "meaning": "uneasy"
+        }
+      ],
+      "combinations": [
+        {
+          "word": "不思議",
+          "reading": "ふしぎ",
+          "meaning": "mysterious"
+        }
+      ]
+    },
+    {
+      "kanji": "作",
+      "meaning": "make",
+      "onyomi": [
+        "サク",
+        "サ"
+      ],
+      "kunyomi": [
+        "つく(る)"
+      ],
+      "standalone_words": [
+        {
+          "word": "作る",
+          "reading": "つくる",
+          "meaning": "make"
+        },
+        {
+          "word": "作文",
+          "reading": "さくぶん",
+          "meaning": "composition"
+        },
+        {
+          "word": "作品",
+          "reading": "さくひん",
+          "meaning": "work of art"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "用",
+      "meaning": "use",
+      "onyomi": [
+        "ヨウ"
+      ],
+      "kunyomi": [
+        "もち(いる)"
+      ],
+      "standalone_words": [
+        {
+          "word": "用事",
+          "reading": "ようじ",
+          "meaning": "errand"
+        },
+        {
+          "word": "利用",
+          "reading": "りよう",
+          "meaning": "use"
+        },
+        {
+          "word": "使用",
+          "reading": "しよう",
+          "meaning": "use"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "度",
+      "meaning": "degree; occasion",
+      "onyomi": [
+        "ド",
+        "ト"
+      ],
+      "kunyomi": [
+        "たび"
+      ],
+      "standalone_words": [
+        {
+          "word": "今度",
+          "reading": "こんど",
+          "meaning": "this time"
+        },
+        {
+          "word": "温度",
+          "reading": "おんど",
+          "meaning": "temperature"
+        },
+        {
+          "word": "一度",
+          "reading": "いちど",
+          "meaning": "once"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "強",
+      "meaning": "strong",
+      "onyomi": [
+        "キョウ",
+        "ゴウ"
+      ],
+      "kunyomi": [
+        "つよ(い)",
+        "つよ(める)"
+      ],
+      "standalone_words": [
+        {
+          "word": "強い",
+          "reading": "つよい",
+          "meaning": "strong"
+        },
+        {
+          "word": "勉強",
+          "reading": "べんきょう",
+          "meaning": "study"
+        },
+        {
+          "word": "強調",
+          "reading": "きょうちょう",
+          "meaning": "emphasis"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "公",
+      "meaning": "public",
+      "onyomi": [
+        "コウ"
+      ],
+      "kunyomi": [
+        "おおやけ"
+      ],
+      "standalone_words": [
+        {
+          "word": "公園",
+          "reading": "こうえん",
+          "meaning": "park"
+        },
+        {
+          "word": "公共",
+          "reading": "こうきょう",
+          "meaning": "public"
+        }
+      ],
+      "combinations": [
+        {
+          "word": "公務員",
+          "reading": "こうむいん",
+          "meaning": "civil servant"
+        }
+      ]
+    },
+    {
+      "kanji": "持",
+      "meaning": "hold",
+      "onyomi": [
+        "ジ"
+      ],
+      "kunyomi": [
+        "も(つ)"
+      ],
+      "standalone_words": [
+        {
+          "word": "持つ",
+          "reading": "もつ",
+          "meaning": "hold"
+        }
+      ],
+      "combinations": [
+        {
+          "word": "気持ち",
+          "reading": "きもち",
+          "meaning": "feeling"
+        },
+        {
+          "word": "持ち物",
+          "reading": "もちもの",
+          "meaning": "belongings"
+        }
+      ]
+    },
+    {
+      "kanji": "野",
+      "meaning": "field",
+      "onyomi": [
+        "ヤ"
+      ],
+      "kunyomi": [
+        "の"
+      ],
+      "standalone_words": [
+        {
+          "word": "野",
+          "reading": "の",
+          "meaning": "field"
+        },
+        {
+          "word": "野菜",
+          "reading": "やさい",
+          "meaning": "vegetables"
+        },
+        {
+          "word": "野球",
+          "reading": "やきゅう",
+          "meaning": "baseball"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "以",
+      "meaning": "since; by means of",
+      "onyomi": [
+        "イ"
+      ],
+      "kunyomi": [],
+      "standalone_words": [
+        {
+          "word": "以上",
+          "reading": "いじょう",
+          "meaning": "above"
+        },
+        {
+          "word": "以下",
+          "reading": "いか",
+          "meaning": "below"
+        },
+        {
+          "word": "以外",
+          "reading": "いがい",
+          "meaning": "except"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "思",
+      "meaning": "think",
+      "onyomi": [
+        "シ"
+      ],
+      "kunyomi": [
+        "おも(う)"
+      ],
+      "standalone_words": [
+        {
+          "word": "思う",
+          "reading": "おもう",
+          "meaning": "think"
+        }
+      ],
+      "combinations": [
+        {
+          "word": "思い出す",
+          "reading": "おもいだす",
+          "meaning": "remember"
+        },
+        {
+          "word": "不思議",
+          "reading": "ふしぎ",
+          "meaning": "mysterious"
+        }
+      ]
+    },
+    {
+      "kanji": "家",
+      "meaning": "house; family",
+      "onyomi": [
+        "カ",
+        "ケ"
+      ],
+      "kunyomi": [
+        "いえ",
+        "や"
+      ],
+      "standalone_words": [
+        {
+          "word": "家",
+          "reading": "いえ",
+          "meaning": "house"
+        },
+        {
+          "word": "家族",
+          "reading": "かぞく",
+          "meaning": "family"
+        },
+        {
+          "word": "家事",
+          "reading": "かじ",
+          "meaning": "housework"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "世",
+      "meaning": "world; generation",
+      "onyomi": [
+        "セイ",
+        "セ"
+      ],
+      "kunyomi": [
+        "よ"
+      ],
+      "standalone_words": [
+        {
+          "word": "世界",
+          "reading": "せかい",
+          "meaning": "world"
+        },
+        {
+          "word": "世話",
+          "reading": "せわ",
+          "meaning": "care"
+        }
+      ],
+      "combinations": [
+        {
+          "word": "世の中",
+          "reading": "よのなか",
+          "meaning": "world"
+        }
+      ]
+    },
+    {
+      "kanji": "多",
+      "meaning": "many",
+      "onyomi": [
+        "タ"
+      ],
+      "kunyomi": [
+        "おお(い)"
+      ],
+      "standalone_words": [
+        {
+          "word": "多い",
+          "reading": "おおい",
+          "meaning": "many"
+        },
+        {
+          "word": "多分",
+          "reading": "たぶん",
+          "meaning": "probably"
+        },
+        {
+          "word": "多数",
+          "reading": "たすう",
+          "meaning": "many"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "正",
+      "meaning": "correct",
+      "onyomi": [
+        "セイ",
+        "ショウ"
+      ],
+      "kunyomi": [
+        "ただ(しい)",
+        "ただ(す)"
+      ],
+      "standalone_words": [
+        {
+          "word": "正月",
+          "reading": "しょうがつ",
+          "meaning": "New Year"
+        },
+        {
+          "word": "正解",
+          "reading": "せいかい",
+          "meaning": "correct answer"
+        }
+      ],
+      "combinations": [
+        {
+          "word": "正しい",
+          "reading": "ただしい",
+          "meaning": "correct"
+        }
+      ]
+    },
+    {
+      "kanji": "安",
+      "meaning": "cheap; safe",
+      "onyomi": [
+        "アン"
+      ],
+      "kunyomi": [
+        "やす(い)"
+      ],
+      "standalone_words": [
+        {
+          "word": "安い",
+          "reading": "やすい",
+          "meaning": "cheap"
+        },
+        {
+          "word": "安全",
+          "reading": "あんぜん",
+          "meaning": "safe"
+        },
+        {
+          "word": "安心",
+          "reading": "あんしん",
+          "meaning": "relief"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "院",
+      "meaning": "institution",
+      "onyomi": [
+        "イン"
+      ],
+      "kunyomi": [],
+      "standalone_words": [
+        {
+          "word": "病院",
+          "reading": "びょういん",
+          "meaning": "hospital"
+        }
+      ],
+      "combinations": [
+        {
+          "word": "大学院",
+          "reading": "だいがくいん",
+          "meaning": "graduate school"
+        }
+      ]
+    },
+    {
+      "kanji": "心",
+      "meaning": "heart; mind",
+      "onyomi": [
+        "シン"
+      ],
+      "kunyomi": [
+        "こころ"
+      ],
+      "standalone_words": [
+        {
+          "word": "心",
+          "reading": "こころ",
+          "meaning": "heart"
+        },
+        {
+          "word": "心配",
+          "reading": "しんぱい",
+          "meaning": "worry"
+        },
+        {
+          "word": "安心",
+          "reading": "あんしん",
+          "meaning": "relief"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "界",
+      "meaning": "world; boundary",
+      "onyomi": [
+        "カイ"
+      ],
+      "kunyomi": [],
+      "standalone_words": [
+        {
+          "word": "世界",
+          "reading": "せかい",
+          "meaning": "world"
+        },
+        {
+          "word": "業界",
+          "reading": "ぎょうかい",
+          "meaning": "industry"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "教",
+      "meaning": "teach",
+      "onyomi": [
+        "キョウ"
+      ],
+      "kunyomi": [
+        "おし(える)",
+        "おそ(わる)"
+      ],
+      "standalone_words": [
+        {
+          "word": "教室",
+          "reading": "きょうしつ",
+          "meaning": "classroom"
+        },
+        {
+          "word": "教育",
+          "reading": "きょういく",
+          "meaning": "education"
+        }
+      ],
+      "combinations": [
+        {
+          "word": "教える",
+          "reading": "おしえる",
+          "meaning": "teach"
+        }
+      ]
+    },
+    {
+      "kanji": "文",
+      "meaning": "writing; sentence",
+      "onyomi": [
+        "ブン",
+        "モン"
+      ],
+      "kunyomi": [
+        "ふみ"
+      ],
+      "standalone_words": [
+        {
+          "word": "文化",
+          "reading": "ぶんか",
+          "meaning": "culture"
+        },
+        {
+          "word": "作文",
+          "reading": "さくぶん",
+          "meaning": "composition"
+        },
+        {
+          "word": "文学",
+          "reading": "ぶんがく",
+          "meaning": "literature"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "元",
+      "meaning": "origin; former",
+      "onyomi": [
+        "ゲン",
+        "ガン"
+      ],
+      "kunyomi": [
+        "もと"
+      ],
+      "standalone_words": [
+        {
+          "word": "元気",
+          "reading": "げんき",
+          "meaning": "healthy"
+        },
+        {
+          "word": "地元",
+          "reading": "じもと",
+          "meaning": "local area"
+        },
+        {
+          "word": "元日",
+          "reading": "がんじつ",
+          "meaning": "New Year's Day"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "重",
+      "meaning": "heavy; important",
+      "onyomi": [
+        "ジュウ",
+        "チョウ"
+      ],
+      "kunyomi": [
+        "おも(い)",
+        "かさ(ねる)",
+        "かさ(なる)"
+      ],
+      "standalone_words": [
+        {
+          "word": "重い",
+          "reading": "おもい",
+          "meaning": "heavy"
+        },
+        {
+          "word": "体重",
+          "reading": "たいじゅう",
+          "meaning": "body weight"
+        },
+        {
+          "word": "重要",
+          "reading": "じゅうよう",
+          "meaning": "important"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "近",
+      "meaning": "near",
+      "onyomi": [
+        "キン"
+      ],
+      "kunyomi": [
+        "ちか(い)"
+      ],
+      "standalone_words": [
+        {
+          "word": "近い",
+          "reading": "ちかい",
+          "meaning": "near"
+        },
+        {
+          "word": "近所",
+          "reading": "きんじょ",
+          "meaning": "neighborhood"
+        },
+        {
+          "word": "最近",
+          "reading": "さいきん",
+          "meaning": "recently"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "考",
+      "meaning": "think",
+      "onyomi": [
+        "コウ"
+      ],
+      "kunyomi": [
+        "かんが(える)"
+      ],
+      "standalone_words": [
+        {
+          "word": "参考",
+          "reading": "さんこう",
+          "meaning": "reference"
+        }
+      ],
+      "combinations": [
+        {
+          "word": "考える",
+          "reading": "かんがえる",
+          "meaning": "think"
+        },
+        {
+          "word": "考え方",
+          "reading": "かんがえかた",
+          "meaning": "way of thinking"
+        }
+      ]
+    },
+    {
+      "kanji": "画",
+      "meaning": "picture; plan",
+      "onyomi": [
+        "ガ",
+        "カク"
+      ],
+      "kunyomi": [],
+      "standalone_words": [
+        {
+          "word": "映画",
+          "reading": "えいが",
+          "meaning": "movie"
+        },
+        {
+          "word": "計画",
+          "reading": "けいかく",
+          "meaning": "plan"
+        },
+        {
+          "word": "画面",
+          "reading": "がめん",
+          "meaning": "screen"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "海",
+      "meaning": "sea",
+      "onyomi": [
+        "カイ"
+      ],
+      "kunyomi": [
+        "うみ"
+      ],
+      "standalone_words": [
+        {
+          "word": "海",
+          "reading": "うみ",
+          "meaning": "sea"
+        },
+        {
+          "word": "海外",
+          "reading": "かいがい",
+          "meaning": "overseas"
+        },
+        {
+          "word": "海岸",
+          "reading": "かいがん",
+          "meaning": "coast"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "売",
+      "meaning": "sell",
+      "onyomi": [
+        "バイ"
+      ],
+      "kunyomi": [
+        "う(る)",
+        "う(れる)"
+      ],
+      "standalone_words": [
+        {
+          "word": "売る",
+          "reading": "うる",
+          "meaning": "sell"
+        },
+        {
+          "word": "売店",
+          "reading": "ばいてん",
+          "meaning": "kiosk"
+        },
+        {
+          "word": "発売",
+          "reading": "はつばい",
+          "meaning": "release for sale"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "知",
+      "meaning": "know",
+      "onyomi": [
+        "チ"
+      ],
+      "kunyomi": [
+        "し(る)"
+      ],
+      "standalone_words": [
+        {
+          "word": "知る",
+          "reading": "しる",
+          "meaning": "know"
+        },
+        {
+          "word": "知識",
+          "reading": "ちしき",
+          "meaning": "knowledge"
+        }
+      ],
+      "combinations": [
+        {
+          "word": "知らせる",
+          "reading": "しらせる",
+          "meaning": "inform"
+        }
+      ]
+    },
+    {
+      "kanji": "道",
+      "meaning": "road; way",
+      "onyomi": [
+        "ドウ",
+        "トウ"
+      ],
+      "kunyomi": [
+        "みち"
+      ],
+      "standalone_words": [
+        {
+          "word": "道",
+          "reading": "みち",
+          "meaning": "road"
+        },
+        {
+          "word": "道路",
+          "reading": "どうろ",
+          "meaning": "road"
+        },
+        {
+          "word": "水道",
+          "reading": "すいどう",
+          "meaning": "water supply"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "集",
+      "meaning": "gather",
+      "onyomi": [
+        "シュウ"
+      ],
+      "kunyomi": [
+        "あつ(まる)",
+        "あつ(める)"
+      ],
+      "standalone_words": [
+        {
+          "word": "集合",
+          "reading": "しゅうごう",
+          "meaning": "gathering"
+        },
+        {
+          "word": "募集",
+          "reading": "ぼしゅう",
+          "meaning": "recruitment"
+        }
+      ],
+      "combinations": [
+        {
+          "word": "集まる",
+          "reading": "あつまる",
+          "meaning": "gather"
+        }
+      ]
+    },
+    {
+      "kanji": "別",
+      "meaning": "separate; different",
+      "onyomi": [
+        "ベツ"
+      ],
+      "kunyomi": [
+        "わか(れる)",
+        "わ(ける)"
+      ],
+      "standalone_words": [
+        {
+          "word": "特別",
+          "reading": "とくべつ",
+          "meaning": "special"
+        },
+        {
+          "word": "別々",
+          "reading": "べつべつ",
+          "meaning": "separately"
+        }
+      ],
+      "combinations": [
+        {
+          "word": "別れる",
+          "reading": "わかれる",
+          "meaning": "part"
+        }
+      ]
+    },
+    {
+      "kanji": "物",
+      "meaning": "thing",
+      "onyomi": [
+        "ブツ",
+        "モツ"
+      ],
+      "kunyomi": [
+        "もの"
+      ],
+      "standalone_words": [
+        {
+          "word": "物",
+          "reading": "もの",
+          "meaning": "thing"
+        }
+      ],
+      "combinations": [
+        {
+          "word": "食べ物",
+          "reading": "たべもの",
+          "meaning": "food"
+        },
+        {
+          "word": "買い物",
+          "reading": "かいもの",
+          "meaning": "shopping"
+        }
+      ]
+    },
+    {
+      "kanji": "使",
+      "meaning": "use",
+      "onyomi": [
+        "シ"
+      ],
+      "kunyomi": [
+        "つか(う)"
+      ],
+      "standalone_words": [
+        {
+          "word": "使う",
+          "reading": "つかう",
+          "meaning": "use"
+        },
+        {
+          "word": "使用",
+          "reading": "しよう",
+          "meaning": "use"
+        }
+      ],
+      "combinations": [
+        {
+          "word": "使い方",
+          "reading": "つかいかた",
+          "meaning": "how to use"
+        }
+      ]
+    },
+    {
+      "kanji": "品",
+      "meaning": "goods; article",
+      "onyomi": [
+        "ヒン"
+      ],
+      "kunyomi": [
+        "しな"
+      ],
+      "standalone_words": [
+        {
+          "word": "品",
+          "reading": "しな",
+          "meaning": "goods"
+        },
+        {
+          "word": "品物",
+          "reading": "しなもの",
+          "meaning": "goods"
+        },
+        {
+          "word": "食品",
+          "reading": "しょくひん",
+          "meaning": "food product"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "計",
+      "meaning": "measure; plan",
+      "onyomi": [
+        "ケイ"
+      ],
+      "kunyomi": [
+        "はか(る)"
+      ],
+      "standalone_words": [
+        {
+          "word": "時計",
+          "reading": "とけい",
+          "meaning": "clock"
+        },
+        {
+          "word": "計画",
+          "reading": "けいかく",
+          "meaning": "plan"
+        },
+        {
+          "word": "合計",
+          "reading": "ごうけい",
+          "meaning": "total"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "死",
+      "meaning": "die",
+      "onyomi": [
+        "シ"
+      ],
+      "kunyomi": [
+        "し(ぬ)"
+      ],
+      "standalone_words": [
+        {
+          "word": "死ぬ",
+          "reading": "しぬ",
+          "meaning": "die"
+        },
+        {
+          "word": "死亡",
+          "reading": "しぼう",
+          "meaning": "death"
+        },
+        {
+          "word": "必死",
+          "reading": "ひっし",
+          "meaning": "desperate"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "特",
+      "meaning": "special",
+      "onyomi": [
+        "トク"
+      ],
+      "kunyomi": [],
+      "standalone_words": [
+        {
+          "word": "特別",
+          "reading": "とくべつ",
+          "meaning": "special"
+        },
+        {
+          "word": "特急",
+          "reading": "とっきゅう",
+          "meaning": "limited express"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "私",
+      "meaning": "I; private",
+      "onyomi": [
+        "シ"
+      ],
+      "kunyomi": [
+        "わたし",
+        "わたくし"
+      ],
+      "standalone_words": [
+        {
+          "word": "私",
+          "reading": "わたし",
+          "meaning": "I"
+        },
+        {
+          "word": "私立",
+          "reading": "しりつ",
+          "meaning": "private institution"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "始",
+      "meaning": "begin",
+      "onyomi": [
+        "シ"
+      ],
+      "kunyomi": [
+        "はじ(める)",
+        "はじ(まる)"
+      ],
+      "standalone_words": [
+        {
+          "word": "開始",
+          "reading": "かいし",
+          "meaning": "start"
+        }
+      ],
+      "combinations": [
+        {
+          "word": "始める",
+          "reading": "はじめる",
+          "meaning": "begin"
+        },
+        {
+          "word": "始まる",
+          "reading": "はじまる",
+          "meaning": "begin"
+        }
+      ]
+    },
+    {
+      "kanji": "朝",
+      "meaning": "morning",
+      "onyomi": [
+        "チョウ"
+      ],
+      "kunyomi": [
+        "あさ"
+      ],
+      "standalone_words": [
+        {
+          "word": "朝",
+          "reading": "あさ",
+          "meaning": "morning"
+        },
+        {
+          "word": "朝食",
+          "reading": "ちょうしょく",
+          "meaning": "breakfast"
+        },
+        {
+          "word": "今朝",
+          "reading": "けさ",
+          "meaning": "this morning"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "運",
+      "meaning": "carry; luck",
+      "onyomi": [
+        "ウン"
+      ],
+      "kunyomi": [
+        "はこ(ぶ)"
+      ],
+      "standalone_words": [
+        {
+          "word": "運ぶ",
+          "reading": "はこぶ",
+          "meaning": "carry"
+        },
+        {
+          "word": "運転",
+          "reading": "うんてん",
+          "meaning": "driving"
+        },
+        {
+          "word": "運動",
+          "reading": "うんどう",
+          "meaning": "exercise"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "終",
+      "meaning": "end",
+      "onyomi": [
+        "シュウ"
+      ],
+      "kunyomi": [
+        "お(わる)",
+        "お(える)"
+      ],
+      "standalone_words": [
+        {
+          "word": "終了",
+          "reading": "しゅうりょう",
+          "meaning": "end"
+        },
+        {
+          "word": "最終",
+          "reading": "さいしゅう",
+          "meaning": "final"
+        }
+      ],
+      "combinations": [
+        {
+          "word": "終わる",
+          "reading": "おわる",
+          "meaning": "end"
+        }
+      ]
+    },
+    {
+      "kanji": "習",
+      "meaning": "learn",
+      "onyomi": [
+        "シュウ"
+      ],
+      "kunyomi": [
+        "なら(う)"
+      ],
+      "standalone_words": [
+        {
+          "word": "習う",
+          "reading": "ならう",
+          "meaning": "learn"
+        },
+        {
+          "word": "練習",
+          "reading": "れんしゅう",
+          "meaning": "practice"
+        },
+        {
+          "word": "学習",
+          "reading": "がくしゅう",
+          "meaning": "learning"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "有",
+      "meaning": "exist; have",
+      "onyomi": [
+        "ユウ",
+        "ウ"
+      ],
+      "kunyomi": [
+        "あ(る)"
+      ],
+      "standalone_words": [
+        {
+          "word": "有名",
+          "reading": "ゆうめい",
+          "meaning": "famous"
+        },
+        {
+          "word": "有料",
+          "reading": "ゆうりょう",
+          "meaning": "paid"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "口",
+      "meaning": "mouth; opening",
+      "onyomi": [
+        "コウ",
+        "ク"
+      ],
+      "kunyomi": [
+        "くち"
+      ],
+      "standalone_words": [
+        {
+          "word": "口",
+          "reading": "くち",
+          "meaning": "mouth"
+        },
+        {
+          "word": "入口",
+          "reading": "いりぐち",
+          "meaning": "entrance"
+        },
+        {
+          "word": "出口",
+          "reading": "でぐち",
+          "meaning": "exit"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "少",
+      "meaning": "few; little",
+      "onyomi": [
+        "ショウ"
+      ],
+      "kunyomi": [
+        "すく(ない)",
+        "すこ(し)"
+      ],
+      "standalone_words": [
+        {
+          "word": "少し",
+          "reading": "すこし",
+          "meaning": "a little"
+        },
+        {
+          "word": "少年",
+          "reading": "しょうねん",
+          "meaning": "boy"
+        }
+      ],
+      "combinations": [
+        {
+          "word": "少ない",
+          "reading": "すくない",
+          "meaning": "few"
+        }
+      ]
+    },
+    {
+      "kanji": "町",
+      "meaning": "town",
+      "onyomi": [
+        "チョウ"
+      ],
+      "kunyomi": [
+        "まち"
+      ],
+      "standalone_words": [
+        {
+          "word": "町",
+          "reading": "まち",
+          "meaning": "town"
+        },
+        {
+          "word": "町中",
+          "reading": "まちなか",
+          "meaning": "town center"
+        },
+        {
+          "word": "町長",
+          "reading": "ちょうちょう",
+          "meaning": "mayor"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "工",
+      "meaning": "construction; craft",
+      "onyomi": [
+        "コウ",
+        "ク"
+      ],
+      "kunyomi": [],
+      "standalone_words": [
+        {
+          "word": "工場",
+          "reading": "こうじょう",
+          "meaning": "factory"
+        },
+        {
+          "word": "工事",
+          "reading": "こうじ",
+          "meaning": "construction"
+        },
+        {
+          "word": "工業",
+          "reading": "こうぎょう",
+          "meaning": "industry"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "建",
+      "meaning": "build",
+      "onyomi": [
+        "ケン",
+        "コン"
+      ],
+      "kunyomi": [
+        "た(てる)",
+        "た(つ)"
+      ],
+      "standalone_words": [
+        {
+          "word": "建物",
+          "reading": "たてもの",
+          "meaning": "building"
+        },
+        {
+          "word": "建設",
+          "reading": "けんせつ",
+          "meaning": "construction"
+        }
+      ],
+      "combinations": [
+        {
+          "word": "建てる",
+          "reading": "たてる",
+          "meaning": "build"
+        }
+      ]
+    },
+    {
+      "kanji": "空",
+      "meaning": "sky; empty",
+      "onyomi": [
+        "クウ"
+      ],
+      "kunyomi": [
+        "そら",
+        "あ(く)",
+        "あ(ける)",
+        "から"
+      ],
+      "standalone_words": [
+        {
+          "word": "空",
+          "reading": "そら",
+          "meaning": "sky"
+        },
+        {
+          "word": "空く",
+          "reading": "あく",
+          "meaning": "become empty"
+        },
+        {
+          "word": "空気",
+          "reading": "くうき",
+          "meaning": "air"
+        },
+        {
+          "word": "空港",
+          "reading": "くうこう",
+          "meaning": "airport"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "急",
+      "meaning": "hurry; urgent",
+      "onyomi": [
+        "キュウ"
+      ],
+      "kunyomi": [
+        "いそ(ぐ)"
+      ],
+      "standalone_words": [
+        {
+          "word": "急ぐ",
+          "reading": "いそぐ",
+          "meaning": "hurry"
+        },
+        {
+          "word": "急行",
+          "reading": "きゅうこう",
+          "meaning": "express"
+        },
+        {
+          "word": "急に",
+          "reading": "きゅうに",
+          "meaning": "suddenly"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "止",
+      "meaning": "stop",
+      "onyomi": [
+        "シ"
+      ],
+      "kunyomi": [
+        "と(まる)",
+        "と(める)",
+        "や(む)",
+        "や(める)"
+      ],
+      "standalone_words": [
+        {
+          "word": "中止",
+          "reading": "ちゅうし",
+          "meaning": "cancellation"
+        }
+      ],
+      "combinations": [
+        {
+          "word": "止まる",
+          "reading": "とまる",
+          "meaning": "stop"
+        },
+        {
+          "word": "止める",
+          "reading": "とめる",
+          "meaning": "stop something"
+        }
+      ]
+    },
+    {
+      "kanji": "送",
+      "meaning": "send",
+      "onyomi": [
+        "ソウ"
+      ],
+      "kunyomi": [
+        "おく(る)"
+      ],
+      "standalone_words": [
+        {
+          "word": "送る",
+          "reading": "おくる",
+          "meaning": "send"
+        },
+        {
+          "word": "放送",
+          "reading": "ほうそう",
+          "meaning": "broadcast"
+        },
+        {
+          "word": "送料",
+          "reading": "そうりょう",
+          "meaning": "shipping fee"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "切",
+      "meaning": "cut",
+      "onyomi": [
+        "セツ",
+        "サイ"
+      ],
+      "kunyomi": [
+        "き(る)",
+        "き(れる)"
+      ],
+      "standalone_words": [
+        {
+          "word": "切る",
+          "reading": "きる",
+          "meaning": "cut"
+        },
+        {
+          "word": "切手",
+          "reading": "きって",
+          "meaning": "postage stamp"
+        },
+        {
+          "word": "大切",
+          "reading": "たいせつ",
+          "meaning": "important"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "転",
+      "meaning": "turn; fall",
+      "onyomi": [
+        "テン"
+      ],
+      "kunyomi": [
+        "ころ(ぶ)",
+        "ころ(がる)"
+      ],
+      "standalone_words": [
+        {
+          "word": "転ぶ",
+          "reading": "ころぶ",
+          "meaning": "fall"
+        },
+        {
+          "word": "運転",
+          "reading": "うんてん",
+          "meaning": "driving"
+        }
+      ],
+      "combinations": [
+        {
+          "word": "自転車",
+          "reading": "じてんしゃ",
+          "meaning": "bicycle"
+        }
+      ]
+    },
+    {
+      "kanji": "研",
+      "meaning": "polish; research",
+      "onyomi": [
+        "ケン"
+      ],
+      "kunyomi": [
+        "と(ぐ)"
+      ],
+      "standalone_words": [
+        {
+          "word": "研究",
+          "reading": "けんきゅう",
+          "meaning": "research"
+        }
+      ],
+      "combinations": [
+        {
+          "word": "研究者",
+          "reading": "けんきゅうしゃ",
+          "meaning": "researcher"
+        }
+      ]
+    },
+    {
+      "kanji": "足",
+      "meaning": "foot; sufficient",
+      "onyomi": [
+        "ソク"
+      ],
+      "kunyomi": [
+        "あし",
+        "た(りる)",
+        "た(す)"
+      ],
+      "standalone_words": [
+        {
+          "word": "足",
+          "reading": "あし",
+          "meaning": "foot"
+        },
+        {
+          "word": "不足",
+          "reading": "ふそく",
+          "meaning": "shortage"
+        }
+      ],
+      "combinations": [
+        {
+          "word": "足りる",
+          "reading": "たりる",
+          "meaning": "be enough"
+        }
+      ]
+    },
+    {
+      "kanji": "究",
+      "meaning": "research",
+      "onyomi": [
+        "キュウ"
+      ],
+      "kunyomi": [
+        "きわ(める)"
+      ],
+      "standalone_words": [
+        {
+          "word": "研究",
+          "reading": "けんきゅう",
+          "meaning": "research"
+        }
+      ],
+      "combinations": [
+        {
+          "word": "研究室",
+          "reading": "けんきゅうしつ",
+          "meaning": "research room"
+        }
+      ]
+    },
+    {
+      "kanji": "楽",
+      "meaning": "fun; music",
+      "onyomi": [
+        "ガク",
+        "ラク"
+      ],
+      "kunyomi": [
+        "たの(しい)",
+        "たの(しむ)"
+      ],
+      "standalone_words": [
+        {
+          "word": "音楽",
+          "reading": "おんがく",
+          "meaning": "music"
+        },
+        {
+          "word": "楽器",
+          "reading": "がっき",
+          "meaning": "instrument"
+        }
+      ],
+      "combinations": [
+        {
+          "word": "楽しい",
+          "reading": "たのしい",
+          "meaning": "fun"
+        }
+      ]
+    },
+    {
+      "kanji": "起",
+      "meaning": "wake; happen",
+      "onyomi": [
+        "キ"
+      ],
+      "kunyomi": [
+        "お(きる)",
+        "お(こる)",
+        "お(こす)"
+      ],
+      "standalone_words": [],
+      "combinations": [
+        {
+          "word": "起きる",
+          "reading": "おきる",
+          "meaning": "get up"
+        },
+        {
+          "word": "起こる",
+          "reading": "おこる",
+          "meaning": "happen"
+        },
+        {
+          "word": "早起き",
+          "reading": "はやおき",
+          "meaning": "early rising"
+        }
+      ]
+    },
+    {
+      "kanji": "着",
+      "meaning": "wear; arrive",
+      "onyomi": [
+        "チャク",
+        "ジャク"
+      ],
+      "kunyomi": [
+        "き(る)",
+        "つ(く)",
+        "つ(ける)"
+      ],
+      "standalone_words": [
+        {
+          "word": "着る",
+          "reading": "きる",
+          "meaning": "wear"
+        },
+        {
+          "word": "着く",
+          "reading": "つく",
+          "meaning": "arrive"
+        },
+        {
+          "word": "到着",
+          "reading": "とうちゃく",
+          "meaning": "arrival"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "病",
+      "meaning": "illness",
+      "onyomi": [
+        "ビョウ",
+        "ヘイ"
+      ],
+      "kunyomi": [
+        "や(む)",
+        "やまい"
+      ],
+      "standalone_words": [
+        {
+          "word": "病気",
+          "reading": "びょうき",
+          "meaning": "illness"
+        },
+        {
+          "word": "病院",
+          "reading": "びょういん",
+          "meaning": "hospital"
+        },
+        {
+          "word": "病人",
+          "reading": "びょうにん",
+          "meaning": "sick person"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "質",
+      "meaning": "quality; question",
+      "onyomi": [
+        "シツ",
+        "シチ",
+        "チ"
+      ],
+      "kunyomi": [],
+      "standalone_words": [
+        {
+          "word": "質問",
+          "reading": "しつもん",
+          "meaning": "question"
+        },
+        {
+          "word": "品質",
+          "reading": "ひんしつ",
+          "meaning": "quality"
+        },
+        {
+          "word": "性質",
+          "reading": "せいしつ",
+          "meaning": "nature"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "待",
+      "meaning": "wait",
+      "onyomi": [
+        "タイ"
+      ],
+      "kunyomi": [
+        "ま(つ)"
+      ],
+      "standalone_words": [
+        {
+          "word": "待つ",
+          "reading": "まつ",
+          "meaning": "wait"
+        },
+        {
+          "word": "期待",
+          "reading": "きたい",
+          "meaning": "expectation"
+        },
+        {
+          "word": "招待",
+          "reading": "しょうたい",
+          "meaning": "invitation"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "試",
+      "meaning": "try; test",
+      "onyomi": [
+        "シ"
+      ],
+      "kunyomi": [
+        "ため(す)",
+        "こころ(みる)"
+      ],
+      "standalone_words": [
+        {
+          "word": "試す",
+          "reading": "ためす",
+          "meaning": "try"
+        },
+        {
+          "word": "試験",
+          "reading": "しけん",
+          "meaning": "exam"
+        },
+        {
+          "word": "試合",
+          "reading": "しあい",
+          "meaning": "match"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "験",
+      "meaning": "test; experience",
+      "onyomi": [
+        "ケン",
+        "ゲン"
+      ],
+      "kunyomi": [],
+      "standalone_words": [
+        {
+          "word": "試験",
+          "reading": "しけん",
+          "meaning": "exam"
+        },
+        {
+          "word": "経験",
+          "reading": "けいけん",
+          "meaning": "experience"
+        },
+        {
+          "word": "実験",
+          "reading": "じっけん",
+          "meaning": "experiment"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "旅",
+      "meaning": "travel",
+      "onyomi": [
+        "リョ"
+      ],
+      "kunyomi": [
+        "たび"
+      ],
+      "standalone_words": [
+        {
+          "word": "旅",
+          "reading": "たび",
+          "meaning": "trip"
+        },
+        {
+          "word": "旅行",
+          "reading": "りょこう",
+          "meaning": "travel"
+        },
+        {
+          "word": "旅館",
+          "reading": "りょかん",
+          "meaning": "Japanese inn"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "服",
+      "meaning": "clothes",
+      "onyomi": [
+        "フク"
+      ],
+      "kunyomi": [],
+      "standalone_words": [
+        {
+          "word": "服",
+          "reading": "ふく",
+          "meaning": "clothes"
+        },
+        {
+          "word": "洋服",
+          "reading": "ようふく",
+          "meaning": "clothes"
+        },
+        {
+          "word": "制服",
+          "reading": "せいふく",
+          "meaning": "uniform"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "夕",
+      "meaning": "evening",
+      "onyomi": [
+        "セキ"
+      ],
+      "kunyomi": [
+        "ゆう"
+      ],
+      "standalone_words": [
+        {
+          "word": "夕方",
+          "reading": "ゆうがた",
+          "meaning": "evening"
+        },
+        {
+          "word": "夕食",
+          "reading": "ゆうしょく",
+          "meaning": "dinner"
+        },
+        {
+          "word": "夕日",
+          "reading": "ゆうひ",
+          "meaning": "evening sun"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "借",
+      "meaning": "borrow",
+      "onyomi": [
+        "シャク"
+      ],
+      "kunyomi": [
+        "か(りる)"
+      ],
+      "standalone_words": [
+        {
+          "word": "借金",
+          "reading": "しゃっきん",
+          "meaning": "debt"
+        }
+      ],
+      "combinations": [
+        {
+          "word": "借りる",
+          "reading": "かりる",
+          "meaning": "borrow"
+        }
+      ]
+    },
+    {
+      "kanji": "曜",
+      "meaning": "weekday",
+      "onyomi": [
+        "ヨウ"
+      ],
+      "kunyomi": [],
+      "standalone_words": [
+        {
+          "word": "曜日",
+          "reading": "ようび",
+          "meaning": "day of the week"
+        }
+      ],
+      "combinations": [
+        {
+          "word": "月曜日",
+          "reading": "げつようび",
+          "meaning": "Monday"
+        },
+        {
+          "word": "日曜日",
+          "reading": "にちようび",
+          "meaning": "Sunday"
+        }
+      ]
+    },
+    {
+      "kanji": "飲",
+      "meaning": "drink",
+      "onyomi": [
+        "イン"
+      ],
+      "kunyomi": [
+        "の(む)"
+      ],
+      "standalone_words": [
+        {
+          "word": "飲む",
+          "reading": "のむ",
+          "meaning": "drink"
+        },
+        {
+          "word": "飲食",
+          "reading": "いんしょく",
+          "meaning": "food and drink"
+        }
+      ],
+      "combinations": [
+        {
+          "word": "飲み物",
+          "reading": "のみもの",
+          "meaning": "drink"
+        }
+      ]
+    },
+    {
+      "kanji": "肉",
+      "meaning": "meat",
+      "onyomi": [
+        "ニク"
+      ],
+      "kunyomi": [],
+      "standalone_words": [
+        {
+          "word": "肉",
+          "reading": "にく",
+          "meaning": "meat"
+        },
+        {
+          "word": "牛肉",
+          "reading": "ぎゅうにく",
+          "meaning": "beef"
+        },
+        {
+          "word": "豚肉",
+          "reading": "ぶたにく",
+          "meaning": "pork"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "貸",
+      "meaning": "lend",
+      "onyomi": [
+        "タイ"
+      ],
+      "kunyomi": [
+        "か(す)"
+      ],
+      "standalone_words": [
+        {
+          "word": "貸す",
+          "reading": "かす",
+          "meaning": "lend"
+        }
+      ],
+      "combinations": [
+        {
+          "word": "貸し出し",
+          "reading": "かしだし",
+          "meaning": "lending"
+        }
+      ]
+    },
+    {
+      "kanji": "堂",
+      "meaning": "hall",
+      "onyomi": [
+        "ドウ"
+      ],
+      "kunyomi": [],
+      "standalone_words": [
+        {
+          "word": "食堂",
+          "reading": "しょくどう",
+          "meaning": "dining hall"
+        },
+        {
+          "word": "講堂",
+          "reading": "こうどう",
+          "meaning": "auditorium"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "鳥",
+      "meaning": "bird",
+      "onyomi": [
+        "チョウ"
+      ],
+      "kunyomi": [
+        "とり"
+      ],
+      "standalone_words": [
+        {
+          "word": "鳥",
+          "reading": "とり",
+          "meaning": "bird"
+        },
+        {
+          "word": "小鳥",
+          "reading": "ことり",
+          "meaning": "small bird"
+        }
+      ],
+      "combinations": [
+        {
+          "word": "焼き鳥",
+          "reading": "やきとり",
+          "meaning": "grilled chicken"
+        }
+      ]
+    },
+    {
+      "kanji": "飯",
+      "meaning": "meal; rice",
+      "onyomi": [
+        "ハン"
+      ],
+      "kunyomi": [
+        "めし"
+      ],
+      "standalone_words": [
+        {
+          "word": "飯",
+          "reading": "めし",
+          "meaning": "meal"
+        },
+        {
+          "word": "ご飯",
+          "reading": "ごはん",
+          "meaning": "rice"
+        }
+      ],
+      "combinations": [
+        {
+          "word": "朝ご飯",
+          "reading": "あさごはん",
+          "meaning": "breakfast"
+        }
+      ]
+    },
+    {
+      "kanji": "勉",
+      "meaning": "exertion",
+      "onyomi": [
+        "ベン"
+      ],
+      "kunyomi": [],
+      "standalone_words": [
+        {
+          "word": "勉強",
+          "reading": "べんきょう",
+          "meaning": "study"
+        },
+        {
+          "word": "勉学",
+          "reading": "べんがく",
+          "meaning": "study"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "冬",
+      "meaning": "winter",
+      "onyomi": [
+        "トウ"
+      ],
+      "kunyomi": [
+        "ふゆ"
+      ],
+      "standalone_words": [
+        {
+          "word": "冬",
+          "reading": "ふゆ",
+          "meaning": "winter"
+        }
+      ],
+      "combinations": [
+        {
+          "word": "冬休み",
+          "reading": "ふゆやすみ",
+          "meaning": "winter vacation"
+        }
+      ]
+    },
+    {
+      "kanji": "昼",
+      "meaning": "daytime",
+      "onyomi": [
+        "チュウ"
+      ],
+      "kunyomi": [
+        "ひる"
+      ],
+      "standalone_words": [
+        {
+          "word": "昼",
+          "reading": "ひる",
+          "meaning": "daytime"
+        },
+        {
+          "word": "昼食",
+          "reading": "ちゅうしょく",
+          "meaning": "lunch"
+        }
+      ],
+      "combinations": [
+        {
+          "word": "昼休み",
+          "reading": "ひるやすみ",
+          "meaning": "lunch break"
+        }
+      ]
+    },
+    {
+      "kanji": "茶",
+      "meaning": "tea",
+      "onyomi": [
+        "チャ",
+        "サ"
+      ],
+      "kunyomi": [],
+      "standalone_words": [
+        {
+          "word": "お茶",
+          "reading": "おちゃ",
+          "meaning": "tea"
+        },
+        {
+          "word": "茶色",
+          "reading": "ちゃいろ",
+          "meaning": "brown"
+        }
+      ],
+      "combinations": [
+        {
+          "word": "喫茶店",
+          "reading": "きっさてん",
+          "meaning": "coffee shop"
+        }
+      ]
+    },
+    {
+      "kanji": "弟",
+      "meaning": "younger brother",
+      "onyomi": [
+        "テイ",
+        "ダイ"
+      ],
+      "kunyomi": [
+        "おとうと"
+      ],
+      "standalone_words": [
+        {
+          "word": "弟",
+          "reading": "おとうと",
+          "meaning": "younger brother"
+        },
+        {
+          "word": "兄弟",
+          "reading": "きょうだい",
+          "meaning": "siblings"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "牛",
+      "meaning": "cow",
+      "onyomi": [
+        "ギュウ"
+      ],
+      "kunyomi": [
+        "うし"
+      ],
+      "standalone_words": [
+        {
+          "word": "牛",
+          "reading": "うし",
+          "meaning": "cow"
+        },
+        {
+          "word": "牛肉",
+          "reading": "ぎゅうにく",
+          "meaning": "beef"
+        },
+        {
+          "word": "牛乳",
+          "reading": "ぎゅうにゅう",
+          "meaning": "milk"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "魚",
+      "meaning": "fish",
+      "onyomi": [
+        "ギョ"
+      ],
+      "kunyomi": [
+        "うお",
+        "さかな"
+      ],
+      "standalone_words": [
+        {
+          "word": "魚",
+          "reading": "さかな",
+          "meaning": "fish"
+        },
+        {
+          "word": "金魚",
+          "reading": "きんぎょ",
+          "meaning": "goldfish"
+        },
+        {
+          "word": "魚屋",
+          "reading": "さかなや",
+          "meaning": "fish shop"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "兄",
+      "meaning": "older brother",
+      "onyomi": [
+        "ケイ",
+        "キョウ"
+      ],
+      "kunyomi": [
+        "あに"
+      ],
+      "standalone_words": [
+        {
+          "word": "兄",
+          "reading": "あに",
+          "meaning": "older brother"
+        },
+        {
+          "word": "兄弟",
+          "reading": "きょうだい",
+          "meaning": "siblings"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "妹",
+      "meaning": "younger sister",
+      "onyomi": [
+        "マイ"
+      ],
+      "kunyomi": [
+        "いもうと"
+      ],
+      "standalone_words": [
+        {
+          "word": "妹",
+          "reading": "いもうと",
+          "meaning": "younger sister"
+        },
+        {
+          "word": "姉妹",
+          "reading": "しまい",
+          "meaning": "sisters"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "姉",
+      "meaning": "older sister",
+      "onyomi": [
+        "シ"
+      ],
+      "kunyomi": [
+        "あね"
+      ],
+      "standalone_words": [
+        {
+          "word": "姉",
+          "reading": "あね",
+          "meaning": "older sister"
+        },
+        {
+          "word": "姉妹",
+          "reading": "しまい",
+          "meaning": "sisters"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "漢",
+      "meaning": "Chinese; kanji",
+      "onyomi": [
+        "カン"
+      ],
+      "kunyomi": [],
+      "standalone_words": [
+        {
+          "word": "漢字",
+          "reading": "かんじ",
+          "meaning": "kanji"
+        },
+        {
+          "word": "漢語",
+          "reading": "かんご",
+          "meaning": "Sino-Japanese word"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "字",
+      "meaning": "character; letter",
+      "onyomi": [
+        "ジ"
+      ],
+      "kunyomi": [
+        "あざ"
+      ],
+      "standalone_words": [
+        {
+          "word": "字",
+          "reading": "じ",
+          "meaning": "character"
+        },
+        {
+          "word": "漢字",
+          "reading": "かんじ",
+          "meaning": "kanji"
+        },
+        {
+          "word": "文字",
+          "reading": "もじ",
+          "meaning": "character"
+        },
+        {
+          "word": "数字",
+          "reading": "すうじ",
+          "meaning": "number"
+        }
+      ],
+      "combinations": []
+    },
+    {
+      "kanji": "英",
+      "meaning": "English",
+      "onyomi": [
+        "エイ"
+      ],
+      "kunyomi": [],
+      "standalone_words": [
+        {
+          "word": "英語",
+          "reading": "えいご",
+          "meaning": "English"
+        },
+        {
+          "word": "英国",
+          "reading": "えいこく",
+          "meaning": "Britain"
+        }
+      ],
+      "combinations": []
+    }
+  ]
+}
