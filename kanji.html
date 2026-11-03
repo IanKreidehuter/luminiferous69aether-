@@ -17,8 +17,6 @@ button{font:inherit;color:inherit;cursor:pointer}
 [lang=ja]{font-family:"Yusei Magic","Hiragino Maru Gothic ProN","Yu Gothic",sans-serif}
 .bg-layer{position:fixed;inset:0;z-index:-2;background:var(--bg) center/cover no-repeat,#c6e5ff}
 .bg-overlay{position:fixed;inset:0;z-index:-1;background:repeating-linear-gradient(118deg,transparent 0 5px,rgba(255,255,255,.35) 5px 7px),rgba(255,255,255,.22)}
-#fx{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
-.fx-s{position:absolute;height:auto;animation:bob 5s ease-in-out var(--d,0s) infinite}.fx-s.tw{animation:tw 2.6s ease-in-out var(--d,0s) infinite}.fx-s.spin{animation:spin 30s linear infinite}
 .page{position:relative;z-index:1;display:flex;justify-content:center;padding:40px 14px 90px}
 .wrap{width:100%;max-width:1080px;display:grid;gap:20px}
 .paper{position:relative;background:#fffdf8;border:3px solid #fff;border-radius:var(--wob);box-shadow:0 0 0 2px #a9d2f2,3px 5px 0 rgba(60,50,90,.12)}
@@ -46,7 +44,6 @@ a.btn{display:inline-block;color:var(--ink);text-decoration:none}
 .lh .no{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--butter);color:var(--ink);font-size:24px;text-shadow:none;box-shadow:2px 3px 0 rgba(60,50,90,.2)}
 .lh small{padding:0 12px;border-radius:99px;background:#fff;color:var(--ink);font-family:"Patrick Hand",cursive;font-size:19px;text-shadow:none}
 .state{padding:26px;text-align:center;background:var(--lav);border-radius:var(--wob);font-size:21px}.state .btn{margin-top:12px;display:inline-block}
-/* study cards */
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:20px 16px}
 .kc{--h:var(--pink);--b:#ff9ec6;background:#fffdf8;border:3px solid var(--b);border-radius:var(--wob);overflow:hidden;box-shadow:3px 5px 0 rgba(60,50,90,.12);animation:pop .5s both;content-visibility:auto;contain-intrinsic-size:auto 300px}
 .t1{--h:var(--sky);--b:#7fc0ee}.t2{--h:var(--mint);--b:#7fcf86}.t3{--h:var(--butter);--b:#f0c63c}.t4{--h:var(--lav);--b:#b79af0}
@@ -62,7 +59,6 @@ a.btn{display:inline-block;color:var(--ink);text-decoration:none}
 .wl li{display:grid;grid-template-columns:auto auto 1fr;gap:8px;align-items:center}
 .wl ruby{font-size:24px}.wl rt{font-size:12px;color:var(--purple)}.wm{font-size:16px;opacity:.8}
 .sp{display:none;width:30px;height:30px;border:0;border-radius:50%;background:var(--sky);font-size:14px}.tts .sp{display:block}
-/* flashcards */
 .fl{display:grid;gap:14px;justify-items:center}
 .fc{width:min(100%,560px);height:min(66vh,440px);perspective:1200px;cursor:pointer}
 .fcard{position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform .55s cubic-bezier(.3,1.3,.5,1)}.fcard.flip{transform:rotateY(180deg)}
@@ -70,7 +66,6 @@ a.btn{display:inline-block;color:var(--ink);text-decoration:none}
 .face.back{transform:rotateY(180deg);background:var(--h);place-content:start center}
 .big{font-size:min(38vw,190px);line-height:1}.tap{font-size:16px;opacity:.65}
 .fbar{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;align-items:center}
-/* quiz */
 .qz{max-width:620px;margin:0 auto;padding:24px 22px;display:grid;gap:14px;text-align:center}
 .qn{font-size:17px;opacity:.7}.qp{font-family:"Gochi Hand",cursive;font-size:36px;line-height:1.1;color:var(--purple)}.qp.big{font-family:"Yusei Magic",sans-serif;font-size:110px;color:var(--ink);text-shadow:3px 3px 0 var(--pink)}
 .qo{display:grid;grid-template-columns:1fr 1fr;gap:12px}
@@ -79,9 +74,6 @@ a.btn{display:inline-block;color:var(--ink);text-decoration:none}
 .qf{min-height:70px;font-size:22px}.sc{font-family:"Gochi Hand",cursive;font-size:60px;color:var(--red)}
 .wrongs{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}.wrongs span{padding:0 12px;font-size:28px;background:var(--pink);border-radius:var(--wob)}
 @keyframes pop{from{opacity:0;transform:translateY(16px) scale(.96)}}
-@keyframes bob{0%,100%{transform:translateY(0) rotate(var(--r,0deg))}50%{transform:translateY(-9px) rotate(calc(var(--r,0deg) + 4deg))}}
-@keyframes tw{0%,100%{transform:scale(1) rotate(var(--r,0deg));opacity:1}50%{transform:scale(1.2) rotate(calc(var(--r,0deg) + 12deg));opacity:.7}}
-@keyframes spin{to{transform:rotate(360deg)}}
 @media(max-width:520px){.grid{grid-template-columns:1fr}.qo{grid-template-columns:1fr}.kj{font-size:60px}header{padding:18px 16px}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
@@ -92,7 +84,7 @@ a.btn{display:inline-block;color:var(--ink);text-decoration:none}
   <header class="paper">
     <div class="hrow"><h1 id="ttl">Kanji Study</h1><div class="langs" role="group" aria-label="Language / Bahasa"><a class="btn go" data-t="home" href="https://iankreidehuter.space/">🏠 Home</a><button type="button" data-l="id">🇮🇩 Indonesia</button><button type="button" data-l="en">🇬🇧 English</button></div></div>
     <p class="sub"><span class="lvl" id="lvl">...</span> <span data-t="sub">Look · Say · Remember</span></p>
-    <div class="bar" role="progressbar" aria-label="Kanji you know" id="pbar"><b id="pfill"></b></div>
+    <div class="bar" role="progressbar" aria-label="Kanji you know" id="pbar" aria-valuemin="0" aria-valuemax="100"><b id="pfill"></b></div>
     <p class="pc" id="ptxt"></p>
     <details><summary data-t="about">About this list</summary><p id="note"></p></details>
     <nav class="modes" role="tablist" aria-label="Study mode">
@@ -110,23 +102,23 @@ a.btn{display:inline-block;color:var(--ink);text-decoration:none}
 </div></main>
 <script>
 (() => {
-  /* ---- settings ---- */
+  /* ---- settings: JSON is loaded from the /assets folder ---- */
   const CFG = { data: {
-      id: ["https://iankreidehuter.space/assets/textbook_kanji_indonesian.json", "assets/textbook_kanji_indonesian.json", "../assets/textbook_kanji_indonesian.json"],
-      en: ["https://iankreidehuter.space/assets/textbook_kanji_english.json", "assets/textbook_kanji_english.json", "../assets/textbook_kanji_english.json"] },
-    assets: "https://iankreidehuter.space/assets/" };
+      id: ["assets/textbook_kanji_cards_indonesian.json", "/assets/textbook_kanji_cards_indonesian.json"],
+      en: ["assets/textbook_kanji_cards_english.json", "/assets/textbook_kanji_cards_english.json"] },
+    quizLen: 10 };
   const T = {
-    en: {home:"🏠 Home",sub:"Look · Say · Remember",cards:"📖 Cards",flash:"🃏 Flashcards",quiz:"🎯 Quiz",load:"📂 Load JSON",about:"About this list",search:"Search kanji, reading or meaning…",all:"All",learn:"Learning",known:"Known",words:"Words",mix:"Mix & match",lesson:"Lesson",alll:"All lessons",nomatch:"No kanji match. Try another search!",nothing:"Nothing here. Pick another filter!",tap:"tap to flip ↻",back:"◀ Back",next:"Next ▶",shuf:"🔀 Shuffle",shufd:"🔀 Shuffled",iknow:"☆ I know it",isknown:"⭐ Known",q:"Question",qm:"What does it mean?",qk:"Which kanji is this?",yes:"Yes!! 🎉",oops:"Oops!",again:"🔁 Play again",tocards:"📖 Back to cards",prac:"Practise these:",nomist:"No mistakes!",s1:"Amazing!! 🌈",s2:"Great job! ⭐",s3:"Nice try! Keep going 💪",kn:"kanji known",done:" — you did it! 🎉",loading:"Loading kanji…",loadfail:"Couldn't load the kanji list from /assets.",badfile:"Couldn't read that file. Is it the kanji JSON?",nokanji:"That file has no kanji in it.",choose:"📂 Choose the JSON file",need4:"Need at least 4 kanji to play.",nolist:"No example words yet.",hint:"Tap a card's star when you know that kanji. Your stars are saved on this device."},
-    id: {home:"🏠 Beranda",sub:"Lihat · Ucapkan · Ingat",cards:"📖 Kartu",flash:"🃏 Kartu Hafalan",quiz:"🎯 Kuis",load:"📂 Muat JSON",about:"Tentang daftar ini",search:"Cari kanji, bacaan, atau arti…",all:"Semua",learn:"Belajar",known:"Hafal",words:"Contoh kata",mix:"Gabungan kata",lesson:"Pelajaran",alll:"Semua pelajaran",nomatch:"Tidak ada kanji yang cocok. Coba cari yang lain!",nothing:"Kosong. Pilih filter lain!",tap:"ketuk untuk membalik ↻",back:"◀ Kembali",next:"Lanjut ▶",shuf:"🔀 Acak",shufd:"🔀 Teracak",iknow:"☆ Aku hafal",isknown:"⭐ Hafal",q:"Soal",qm:"Apa artinya?",qk:"Kanji yang mana ini?",yes:"Benar!! 🎉",oops:"Yah!",again:"🔁 Main lagi",tocards:"📖 Kembali ke kartu",prac:"Latih yang ini:",nomist:"Tidak ada yang salah!",s1:"Luar biasa!! 🌈",s2:"Kerja bagus! ⭐",s3:"Ayo coba lagi! 💪",kn:"kanji dihafal",done:" — kamu berhasil! 🎉",loading:"Memuat kanji…",loadfail:"Daftar kanji tidak bisa dimuat dari /assets.",badfile:"File tidak bisa dibaca. Apakah ini JSON kanji?",nokanji:"File itu tidak berisi kanji.",choose:"📂 Pilih file JSON",need4:"Butuh minimal 4 kanji untuk bermain.",nolist:"Belum ada contoh kata.",hint:"Ketuk bintang pada kartu saat kamu sudah hafal kanjinya. Bintangmu tersimpan di perangkat ini."} };
+    en: {home:"🏠 Home",sub:"Look · Say · Remember",cards:"📖 Cards",flash:"🃏 Flashcards",quiz:"🎯 Quiz",load:"📂 Load JSON",about:"About this list",search:"Search kanji, reading or meaning…",all:"All",learn:"Learning",known:"Known",words:"Examples",mix:"Mix & match",lesson:"Lesson",alll:"All lessons",nomatch:"No kanji match. Try another search!",nothing:"Nothing here. Pick another filter!",tap:"tap to flip ↻",back:"◀ Back",next:"Next ▶",shuf:"🔀 Shuffle",shufd:"🔀 Shuffled",iknow:"☆ I know it",isknown:"⭐ Known",q:"Question",qm:"What does it mean?",qk:"Which kanji is this?",yes:"Yes!! 🎉",oops:"Oops!",again:"🔁 Play again",tocards:"📖 Back to cards",prac:"Practise these:",nomist:"No mistakes!",s1:"Amazing!! 🌈",s2:"Great job! ⭐",s3:"Nice try! Keep going 💪",kn:"kanji known",done:" — you did it! 🎉",loadfail:"Couldn't load the kanji list from /assets.",badfile:"Couldn't read that file. Is it the kanji JSON?",nokanji:"That file has no kanji in it.",choose:"📂 Choose the JSON file",need4:"Need at least 4 kanji to play.",nolist:"No example words yet.",nextq:"Next ▶",finish:"Finish ▶",hint:"Tap a card's star when you know that kanji. Your stars are saved on this device."},
+    id: {home:"🏠 Beranda",sub:"Lihat · Ucapkan · Ingat",cards:"📖 Kartu",flash:"🃏 Kartu Hafalan",quiz:"🎯 Kuis",load:"📂 Muat JSON",about:"Tentang daftar ini",search:"Cari kanji, bacaan, atau arti…",all:"Semua",learn:"Belajar",known:"Hafal",words:"Contoh kata",mix:"Gabungan kata",lesson:"Pelajaran",alll:"Semua pelajaran",nomatch:"Tidak ada kanji yang cocok. Coba cari yang lain!",nothing:"Kosong. Pilih filter lain!",tap:"ketuk untuk membalik ↻",back:"◀ Kembali",next:"Lanjut ▶",shuf:"🔀 Acak",shufd:"🔀 Teracak",iknow:"☆ Aku hafal",isknown:"⭐ Hafal",q:"Soal",qm:"Apa artinya?",qk:"Kanji yang mana ini?",yes:"Benar!! 🎉",oops:"Yah!",again:"🔁 Main lagi",tocards:"📖 Kembali ke kartu",prac:"Latih yang ini:",nomist:"Tidak ada yang salah!",s1:"Luar biasa!! 🌈",s2:"Kerja bagus! ⭐",s3:"Ayo coba lagi! 💪",kn:"kanji dihafal",done:" — kamu berhasil! 🎉",loadfail:"Daftar kanji tidak bisa dimuat dari /assets.",badfile:"File tidak bisa dibaca. Apakah ini JSON kanji?",nokanji:"File itu tidak berisi kanji.",choose:"📂 Pilih file JSON",need4:"Butuh minimal 4 kanji untuk bermain.",nolist:"Belum ada contoh kata.",nextq:"Lanjut ▶",finish:"Selesai ▶",hint:"Ketuk bintang pada kartu saat kamu sudah hafal kanjinya. Bintangmu tersimpan di perangkat ini."} };
   const LN = {住所:["Address","Alamat"],形容詞:["Adjectives","Kata sifat"],趣味:["Hobbies","Hobi"],仕事:["Work","Pekerjaan"],自然:["Nature","Alam"],季節:["Seasons","Musim"],体:["Body","Tubuh"],時間:["Time","Waktu"],動詞:["Verbs","Kata kerja"],家族:["Family","Keluarga"],生活:["Daily life","Kehidupan"],食べ物:["Food","Makanan"],部首:["Radicals","Radikal"],場所:["Places","Tempat"],交通:["Transport","Transportasi"],学校:["School","Sekolah"]};
   const $ = s => document.querySelector(s);
   const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
   const arr = a => Array.isArray(a) ? a.map(String) : [];
-  const wl = a => Array.isArray(a) ? a.filter(w => w && w.word).map(w => ({word: String(w.word), reading: String(w.reading || ""), meaning: String(w.meaning || "")})) : [];
   const parseV = s => { s = String(s ?? "").trim(); if (!s) return null; const m = s.match(/^(.+?)[（(]([^）)]*)[）)]$/); return m ? {word: m[1].trim(), reading: m[2].trim(), meaning: ""} : {word: s, reading: "", meaning: ""}; };
+  const wl = a => Array.isArray(a) ? a.map(w => typeof w === "string" ? parseV(w) : (w && w.word ? {word: String(w.word), reading: String(w.reading || ""), meaning: String(w.meaning || "")} : null)).filter(Boolean) : [];
   const hira = s => s.replace(/[\u30a1-\u30f6]/g, c => String.fromCharCode(c.charCodeAt(0) - 0x60)).toLowerCase();
   const shuffle = a => { for (let i = a.length - 1; i > 0; i--) { const j = Math.random() * (i + 1) | 0; [a[i], a[j]] = [a[j], a[i]]; } return a; };
-  let lang = "en", D = {}, K = [], lessons = [], DS = {}, known = new Set(), mode = "study", flt = "all", lessonSel = 0, fdeck = [], fi = 0, shuf = false, qz = null;
+  let lang = "en", D = {}, K = [], lessons = [], known = new Set(), mode = "study", flt = "all", lessonSel = 0, fdeck = [], fi = 0, shuf = false, qz = null;
   const t = k => (T[lang] && T[lang][k]) || T.en[k] || k;
   const KEY = () => "kanjiKnown:" + (D.source || D.level || D.title || "list");
   const lTr = name => { const m = String(name).match(/^(.*?)([0-9０-９]*)$/), e = LN[m[1]]; return e ? e[lang === "id" ? 1 : 0] + (m[2] ? " " + m[2].replace(/[０-９]/g, c => String.fromCharCode(c.charCodeAt(0) - 0xFEE0)) : "") : ""; };
@@ -141,29 +133,17 @@ a.btn{display:inline-block;color:var(--ink);text-decoration:none}
     document.querySelectorAll("[data-l]").forEach(b => b.setAttribute("aria-pressed", b.dataset.l === lang));
   }
   function init(d, keep) {
-    // Accept both the original /assets JSON structure and the textbook card JSON.
-    // The card files contain one kanji per card, with readings and vocabulary.
+    // Accepts the textbook "cards" JSON (one kanji per card) and the older "kanji" JSON.
     if (!Array.isArray(d.kanji) && Array.isArray(d.cards)) {
-      d = {
-        ...d,
-        kanji: d.cards.map(c => ({
-          kanji: c.kanji,
-          meaning: c.heading || c.meaning || "",
-          onyomi: Array.isArray(c.onyomi) ? c.onyomi : [],
-          kunyomi: Array.isArray(c.kunyomi) ? c.kunyomi : [],
-          vocabulary_examples: Array.isArray(c.vocabulary) ? c.vocabulary : [],
-          standalone_words: Array.isArray(c.alone) ? c.alone : (Array.isArray(c.standalone_words) ? c.standalone_words : []),
-          combinations: Array.isArray(c.combinations) ? c.combinations : []
-        }))
-      };
+      d = {...d, kanji: d.cards.map(c => ({kanji: c.kanji, meaning: c.heading || c.meaning || "", onyomi: c.onyomi, kunyomi: c.kunyomi, vocabulary_examples: c.vocabulary, combinations: c.combinations}))};
     }
     D = d;
     const L = Array.isArray(d.lesson_order) ? d.lesson_order : [], lmap = new Map();
     lessons = L.map((l, i) => { (l.kanji || []).forEach(x => { if (!lmap.has(String(x))) lmap.set(String(x), i + 1); }); return {n: i + 1, name: String(l.lesson || "")}; });
     K = (d.kanji || []).filter(k => k && k.kanji).map(k => {
       const o = {kanji: String(k.kanji), meaning: String(k.meaning || "").trim(), onyomi: arr(k.onyomi), kunyomi: arr(k.kunyomi), lesson: lmap.get(String(k.kanji)) || 0};
-      const ex = Array.isArray(k.vocabulary_examples) ? k.vocabulary_examples.map(parseV).filter(Boolean) : [];
-      o.words = ex.length ? ex : wl(k.standalone_words); o.combos = wl(k.combinations);
+      const ex = wl(k.vocabulary_examples || k.standalone_words);
+      o.words = ex; o.combos = wl(k.combinations);
       o.lessonWord = !o.meaning && o.lesson && lessons[o.lesson - 1].name === o.kanji;
       o.hay = hira([o.kanji, mean(o), ...o.onyomi, ...o.kunyomi, ...o.words.concat(o.combos).flatMap(w => [w.word, w.reading, w.meaning])].join(" "));
       return o;
@@ -173,9 +153,9 @@ a.btn{display:inline-block;color:var(--ink);text-decoration:none}
     $("#ttl").textContent = d.title || "Kanji Study"; $("#lvl").textContent = d.level || d.language || "Kanji";
     $("#note").textContent = [d.note || d.format_note, t("hint")].filter(Boolean).join(" ");
     document.title = d.title || "Kanji Study";
-    if (!keep) { flt = "all"; lessonSel = 0; $("#q").value = ""; }
+    if (!keep) { flt = "all"; lessonSel = 0; fi = 0; $("#q").value = ""; }
     if (lessonSel > lessons.length) lessonSel = 0;
-    lessonOpts(); chips(); progress(); setMode(mode, true);
+    lessonOpts(); chips(); progress(); setMode(mode);
   }
   const save = () => { try { localStorage.setItem(KEY(), JSON.stringify([...known])); } catch (e) {} };
   const fail = m => { $("#state").hidden = false; $("#state").innerHTML = esc(m) + `<br><label class="btn go">${esc(t("choose"))}<input type="file" accept=".json,application/json" hidden id="pick2"></label>`; ["#vStudy", "#vFlash", "#vQuiz"].forEach(s => $(s).hidden = true); };
@@ -200,6 +180,7 @@ a.btn{display:inline-block;color:var(--ink);text-decoration:none}
   const body = k => list(t("words"), k.words) + list(t("mix"), k.combos);
   const card = (k, i) => `<article class="kc t${i % 5}" style="animation-delay:${Math.min(i, 10) * 40}ms"><div class="kh"><div class="kj" lang="ja"${k.kanji.length > 1 ? ' style="font-size:44px"' : ""}>${esc(k.kanji)}</div><div><span class="mn">${esc(mean(k))}</span><div class="rd">${reads(k)}</div></div>${star(k)}</div><div class="kb">${body(k) || `<p class="wm">${esc(t("nolist"))}</p>`}</div></article>`;
 
+  /* ---- cards ---- */
   function study() {
     const q = hira($("#q").value.trim()), v = K.filter(k => inFilter(k) && k.hay.includes(q)), g = new Map();
     v.forEach(k => { if (!g.has(k.lesson)) g.set(k.lesson, []); g.get(k.lesson).push(k); });
@@ -211,93 +192,130 @@ a.btn{display:inline-block;color:var(--ink);text-decoration:none}
     $("#vStudy").innerHTML = html;
     $("#state").hidden = v.length > 0; if (!v.length) $("#state").textContent = t("nomatch");
   }
+
+  /* ---- flashcards ---- */
   function flashDeck() { fdeck = K.filter(inFilter); if (shuf) shuffle(fdeck); fi = Math.min(fi, Math.max(fdeck.length - 1, 0)); flash(); }
   function flash() {
     const k = fdeck[fi], box = $("#vFlash");
     $("#state").hidden = !!k; if (!k) { $("#state").textContent = t("nothing"); box.innerHTML = ""; return; }
+    const isK = known.has(k.kanji);
     box.innerHTML = `<div class="fc kc t${fi % 5}" id="fc" tabindex="0" role="button" aria-label="Flip card" style="animation:none;box-shadow:none;border:0;background:none;overflow:visible"><div class="fcard" id="fcard">
       <div class="face"><div class="big" lang="ja"${k.kanji.length > 1 ? ' style="font-size:min(22vw,110px)"' : ""}>${esc(k.kanji)}</div><p class="tap">${esc(t("tap"))}</p></div>
       <div class="face back"><div class="kj" lang="ja">${esc(k.kanji)}</div><span class="mn">${esc(mean(k))}</span><div class="rd" style="justify-content:center">${reads(k)}</div>${body(k)}</div></div></div>
-      <div class="fbar"><button type="button" class="btn" data-f="prev">${t("back")}</button><span>${fi + 1} / ${fdeck.length}</span><button type="button" class="btn" data-f="next">${t("next")}</button>
-      <button type="button" class="btn alt" data-f="shuf">${shuf ? t("shufd") : t("shuf")}</button><button type="button" class="btn go" data-f="know">${known.has(k.kanji) ? t("isknown") : t("iknow")}</button></div>`;
+      <div class="fbar"><button type="button" class="btn" data-a="prev">${esc(t("back"))}</button><span>${fi + 1} / ${fdeck.length}</span><button type="button" class="btn go" data-a="next">${esc(t("next"))}</button></div>
+      <div class="fbar"><button type="button" class="btn alt" data-a="shuf">${esc(shuf ? t("shufd") : t("shuf"))}</button><button type="button" class="btn" data-a="known" aria-pressed="${isK}">${esc(isK ? t("isknown") : t("iknow"))}</button></div>`;
   }
   const flip = () => { const c = $("#fcard"); if (c) c.classList.toggle("flip"); };
-  const goF = d => { if (!fdeck.length) return; fi = (fi + d + fdeck.length) % fdeck.length; flash(); };
+  const fgo = d => { if (!fdeck.length) return; fi = (fi + d + fdeck.length) % fdeck.length; flash(); };
 
-  function startQuiz() {
-    const pool = K.filter(k => mean(k) && (!lessonSel || k.lesson === lessonSel));
-    if (K.filter(k => mean(k)).length < 4 || !pool.length) { $("#vQuiz").textContent = t("need4"); return; }
-    qz = {qs: shuffle(pool.slice()).slice(0, 10), i: 0, score: 0, wrong: []}; ask();
+  /* ---- quiz ---- */
+  function quizStart() {
+    const usable = a => a.filter(k => mean(k));
+    let pool = usable(K.filter(inFilter));
+    if (new Set(pool.map(mean)).size < 4 || pool.length < 4) pool = usable(K);
+    if (new Set(pool.map(mean)).size < 4) { qz = null; $("#state").hidden = false; $("#state").textContent = t("need4"); $("#vQuiz").innerHTML = ""; return; }
+    $("#state").hidden = true;
+    const all = usable(K);
+    const items = shuffle(pool.slice()).slice(0, CFG.quizLen).map((k, i) => {
+      const type = i % 2 ? "k" : "m", seen = new Set([mean(k)]), opts = [k];
+      shuffle(all.slice()).forEach(o => { if (opts.length < 4 && !seen.has(mean(o)) && o.kanji !== k.kanji) { seen.add(mean(o)); opts.push(o); } });
+      return {k, type, opts: shuffle(opts)};
+    });
+    qz = {items, i: 0, score: 0, wrong: [], answered: false};
+    quiz();
   }
-  function ask() {
-    if (qz.i >= qz.qs.length) return result();
-    const q = qz.qs[qz.i], rev = Math.random() < .4;
-    const opts = shuffle([q, ...shuffle(K.filter(k => k !== q && mean(k) && mean(k) !== mean(q))).slice(0, 3)]);
-    $("#vQuiz").innerHTML = `<p class="qn">${esc(t("q"))} ${qz.i + 1} / ${qz.qs.length}</p><div class="qp${rev ? "" : " big"}" ${rev ? "" : 'lang="ja"'}${!rev && q.kanji.length > 1 ? ' style="font-size:64px"' : ""}>${esc(rev ? mean(q) : q.kanji)}</div>
-      <p>${esc(rev ? t("qk") : t("qm"))}</p><div class="qo">${opts.map(o => `<button type="button" class="opt" ${rev ? 'lang="ja"' : ""} data-ok="${o === q}">${esc(rev ? o.kanji : mean(o))}</button>`).join("")}</div><div class="qf" id="qf"></div>`;
+  function quiz() {
+    const box = $("#vQuiz");
+    if (!qz) return;
+    if (qz.i >= qz.items.length) {
+      const n = qz.items.length, p = qz.score / n, msg = p >= .9 ? t("s1") : p >= .6 ? t("s2") : t("s3");
+      box.innerHTML = `<p class="qp">${esc(msg)}</p><p class="sc">${qz.score} / ${n}</p>` +
+        (qz.wrong.length ? `<p class="qn">${esc(t("prac"))}</p><div class="wrongs">${qz.wrong.map(k => `<span lang="ja">${esc(k.kanji)}</span>`).join("")}</div>` : `<p class="qf">${esc(t("nomist"))}</p>`) +
+        `<div class="fbar"><button type="button" class="btn go" data-a="qagain">${esc(t("again"))}</button><button type="button" class="btn alt" data-a="tocards">${esc(t("tocards"))}</button></div>`;
+      return;
+    }
+    const it = qz.items[qz.i], k = it.k, last = qz.i === qz.items.length - 1;
+    box.innerHTML = `<p class="qn">${esc(t("q"))} ${qz.i + 1} / ${qz.items.length}</p>` +
+      (it.type === "m" ? `<p class="qp">${esc(t("qm"))}</p><p class="qp big" lang="ja">${esc(k.kanji)}</p>` : `<p class="qp">${esc(t("qk"))}</p><p class="qp">${esc(mean(k))}</p>`) +
+      `<div class="qo">${it.opts.map((o, n) => `<button type="button" class="opt" data-o="${n}"${it.type === "k" ? ' lang="ja"' : ""}>${esc(it.type === "m" ? mean(o) : o.kanji)}</button>`).join("")}</div>` +
+      `<p class="qf" aria-live="polite"></p><div class="fbar"><button type="button" class="btn go" data-a="qnext" hidden>${esc(last ? t("finish") : t("nextq"))}</button></div>`;
+    qz.answered = false;
   }
-  function result() {
-    const n = qz.qs.length, s = qz.score, msg = s >= n * .9 ? t("s1") : s >= n * .6 ? t("s2") : t("s3");
-    qz.wrong.forEach(k => known.delete(k.kanji)); save(); progress(); chips();
-    $("#vQuiz").innerHTML = `<p class="sc">${s} / ${n}</p><p style="font-size:26px">${msg}</p>${qz.wrong.length ? `<p>${esc(t("prac"))}</p><div class="wrongs">${qz.wrong.map(k => `<span lang="ja" title="${esc(mean(k))}">${esc(k.kanji)}</span>`).join("")}</div>` : `<p>${esc(t("nomist"))}</p>`}
-      <div class="fbar"><button type="button" class="btn go" data-q="again">${t("again")}</button><button type="button" class="btn" data-q="cards">${t("tocards")}</button></div>`;
+  function answer(n) {
+    if (!qz || qz.answered) return;
+    qz.answered = true;
+    const it = qz.items[qz.i], ok = it.opts[n].kanji === it.k.kanji, bs = [...document.querySelectorAll("#vQuiz .opt")];
+    bs.forEach((b, i) => { b.disabled = true; if (it.opts[i].kanji === it.k.kanji) b.classList.add("good"); else if (i === n) b.classList.add("bad"); });
+    if (ok) qz.score++; else qz.wrong.push(it.k);
+    const f = $("#vQuiz .qf");
+    f.innerHTML = ok ? esc(t("yes")) : `${esc(t("oops"))} <span lang="ja">${esc(it.k.kanji)}</span> = ${esc(mean(it.k))}${it.k.onyomi.length || it.k.kunyomi.length ? ` <span lang="ja">(${[...it.k.onyomi, ...it.k.kunyomi].map(esc).join("・")})</span>` : ""}`;
+    $("#vQuiz [data-a=qnext]").hidden = false;
   }
-  function setMode(m, force) {
-    if (m === mode && !force) return; mode = m;
-    document.querySelectorAll(".modes [data-m]").forEach(b => b.setAttribute("aria-selected", b.dataset.m === m));
+
+  /* ---- modes ---- */
+  function setMode(m) {
+    mode = m;
+    document.querySelectorAll("[data-m]").forEach(b => b.setAttribute("aria-selected", b.dataset.m === m));
     $("#vStudy").hidden = m !== "study"; $("#vFlash").hidden = m !== "flash"; $("#vQuiz").hidden = m !== "quiz";
-    $("#q").hidden = m !== "study"; $("#chips").hidden = m === "quiz"; $("#state").hidden = true;
-    if (m === "study") study(); else if (m === "flash") flashDeck(); else startQuiz();
+    $("#q").hidden = m !== "study";
+    if (!K.length) return;
+    if (m === "study") study(); else if (m === "flash") flashDeck(); else quizStart();
   }
-  async function fetchFirst(urls) {
-    for (const u of urls) { try { const r = await fetch(u, {cache: "no-cache"}); if (r.ok) return await r.json(); } catch (e) {} }
-    return null;
-  }
-  async function setLang(l) {
+  const rerender = () => setMode(mode);
+
+  /* ---- loading ---- */
+  async function loadLang(l) {
     lang = l; try { localStorage.setItem("kanjiLang", l); } catch (e) {}
-    applyText(); $("#state").hidden = false; $("#state").textContent = t("loading");
-    if (!DS[l]) DS[l] = await fetchFirst(CFG.data[l]);
-    DS[l] ? init(DS[l], true) : fail(t("loadfail"));
+    applyText(); $("#state").hidden = false; $("#state").textContent = "…";
+    for (const url of CFG.data[l]) {
+      try { const r = await fetch(url); if (!r.ok) continue; return init(await r.json(), true); } catch (e) {}
+    }
+    fail(t("loadfail"));
+  }
+  function readFile(f) {
+    if (!f) return;
+    const r = new FileReader();
+    r.onload = () => { try { init(JSON.parse(r.result)); } catch (e) { fail(t("badfile")); } };
+    r.onerror = () => fail(t("badfile"));
+    r.readAsText(f);
   }
 
   /* ---- events ---- */
   document.addEventListener("click", e => {
-    const t = e.target, sp = t.closest(".sp"); if (sp) return say(sp.dataset.say);
-    const kn = t.closest(".kn"); if (kn) { const k = kn.dataset.k; known.has(k) ? known.delete(k) : known.add(k); save(); progress(); chips(); if (flt === "all") kn.setAttribute("aria-pressed", known.has(k)); else study(); return; }
-    const md = t.closest("[data-m]"); if (md) return setMode(md.dataset.m);
-    const ch = t.closest("#chips button"); if (ch) { flt = ch.dataset.k; chips(); mode === "flash" ? (fi = 0, flashDeck()) : study(); return; }
-    const f = t.closest("[data-f]"); if (f) { const a = f.dataset.f; if (a === "prev") goF(-1); else if (a === "next") goF(1); else if (a === "shuf") { shuf = !shuf; fi = 0; flashDeck(); } else if (a === "know" && fdeck[fi]) { const k = fdeck[fi].kanji; known.has(k) ? known.delete(k) : known.add(k); save(); progress(); chips(); f.textContent = known.has(k) ? t("isknown") : t("iknow"); } return; }
-    if (t.closest("#fc")) return flip();
-    const o = t.closest(".opt");
-    if (o && !o.disabled && qz) {
-      const ok = o.dataset.ok === "true", q = qz.qs[qz.i];
-      document.querySelectorAll(".opt").forEach(b => { b.disabled = true; if (b.dataset.ok === "true") b.classList.add("good"); });
-      if (ok) qz.score++; else { o.classList.add("bad"); qz.wrong.push(q); }
-      $("#qf").innerHTML = (ok ? t("yes") : `${t("oops")} <span lang="ja">${esc(q.kanji)}</span> = ${esc(mean(q))}`) + `<br><button type="button" class="btn go" data-q="next" style="margin-top:8px">${t("next")}</button>`; return;
+    const el = e.target.closest("button,#fc,a");
+    if (!el) return;
+    if (el.dataset.say) { say(el.dataset.say); return; }
+    if (el.dataset.l) { if (el.dataset.l !== lang) loadLang(el.dataset.l); return; }
+    if (el.dataset.m) { setMode(el.dataset.m); return; }
+    if (el.classList.contains("kn")) {
+      const k = el.dataset.k; known.has(k) ? known.delete(k) : known.add(k);
+      el.setAttribute("aria-pressed", known.has(k)); save(); progress(); chips(); return;
     }
-    const qb = t.closest("[data-q]"); if (qb) { const a = qb.dataset.q; if (a === "next") { qz.i++; ask(); } else if (a === "again") startQuiz(); else setMode("study"); }
+    if (el.closest("#chips")) { flt = el.dataset.k; chips(); fi = 0; rerender(); return; }
+    if (el.id === "fc") { flip(); return; }
+    if (el.dataset.o !== undefined) { answer(+el.dataset.o); return; }
+    switch (el.dataset.a) {
+      case "prev": fgo(-1); break;
+      case "next": fgo(1); break;
+      case "shuf": shuf = !shuf; flashDeck(); break;
+      case "known": { const k = fdeck[fi]; if (!k) break; known.has(k.kanji) ? known.delete(k.kanji) : known.add(k.kanji); save(); progress(); chips(); flash(); break; }
+      case "qnext": qz.i++; quiz(); break;
+      case "qagain": quizStart(); break;
+      case "tocards": setMode("study"); break;
+    }
   });
-  $("#q").addEventListener("input", study);
   document.addEventListener("keydown", e => {
-    if (mode !== "flash" || /INPUT|TEXTAREA/.test(e.target.tagName)) return;
-    if (e.key === "ArrowRight") goF(1); else if (e.key === "ArrowLeft") goF(-1); else if ((e.key === " " || e.key === "Enter") && e.target.id === "fc") { e.preventDefault(); flip(); }
+    if (mode !== "flash" || /INPUT|SELECT|TEXTAREA/.test(e.target.tagName)) return;
+    if (e.key === "ArrowRight") fgo(1); else if (e.key === "ArrowLeft") fgo(-1);
+    else if ((e.key === "Enter" || e.key === " ") && e.target.id === "fc") { e.preventDefault(); flip(); }
   });
-  const readFile = f => f && f.text().then(x => init(JSON.parse(x))).catch(() => fail(t("badfile")));
+  $("#q").addEventListener("input", () => { if (mode === "study") study(); });
+  $("#lesson").addEventListener("change", e => { lessonSel = +e.target.value; fi = 0; rerender(); });
   document.addEventListener("change", e => { if (e.target.id === "pick" || e.target.id === "pick2") readFile(e.target.files[0]); });
 
-  document.addEventListener("click", e => { const b = e.target.closest("[data-l]"); if (b && b.dataset.l !== lang) setLang(b.dataset.l); });
-  $("#lesson").addEventListener("change", e => { lessonSel = +e.target.value || 0; fi = 0; setMode(mode, true); });
-  let saved = ""; try { saved = localStorage.getItem("kanjiLang") || ""; } catch (e) {}
-  lang = T[saved] ? saved : (/^id/i.test(navigator.language || "") ? "id" : "en");
-  setLang(lang);
-
-  /* ---- stickers (decoration only) ---- */
-  const k2 = innerWidth < 600 ? .7 : 1, fx = document.createElement("div"); fx.id = "fx"; fx.setAttribute("aria-hidden", "true");
-  const sp = [["cloud.png",3,2,96,0,""],["rainbow.png",74,1,130,5,""],["sun.png",44,2,66,-8,"spin"],["yellow_love.png",8,28,38,-10,"tw"],["love.png",92,36,40,10,"tw"],
-    ["flower.png",3,74,64,0,""],["cat.png",85,66,86,-6,""],["leaf.png",20,92,50,8,""],["flower.png",72,90,64,0,""],["dog.png",1,88,80,6,""]];
-  fx.innerHTML = sp.map((s, i) => `<img class="fx-s ${s[5]}" src="${CFG.assets}${s[0]}" alt="" style="left:${s[1]}%;top:${s[2]}%;width:${Math.round(s[3] * k2)}px;--r:${s[4]}deg;--d:-${(i * 7) % 5}s">`).join("");
-  fx.addEventListener("error", e => { if (e.target.tagName === "IMG") e.target.style.visibility = "hidden"; }, true);
-  document.body.appendChild(fx);
+  let start = "en";
+  try { start = localStorage.getItem("kanjiLang") || (/^id/i.test(navigator.language) ? "id" : "en"); } catch (e) {}
+  loadLang(start === "id" ? "id" : "en");
 })();
 </script>
 </body>
